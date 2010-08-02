@@ -12,6 +12,8 @@
 
 @implementation AppModel
 @synthesize serverURL;
+@synthesize currentUserLocation;
+
 
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);

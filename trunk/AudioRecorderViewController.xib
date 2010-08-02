@@ -51,7 +51,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">microphoneForeground.png</string>
+							<string key="NSResourceName">microphoneBackground.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="526550971">
@@ -598,7 +598,7 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">WeBIRD.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">microphoneForeground.png</string>
+			<string key="NS.key.0">microphoneBackground.png</string>
 			<string key="NS.object.0">{320, 411}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">117</string>
