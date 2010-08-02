@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* WeBIRDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WeBIRDAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		AB3B2A2C1207240F009283D1 /* microphoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3B2A281207240F009283D1 /* microphoneIcon.png */; };
+		AB3B2A2D1207240F009283D1 /* AudioRecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3B2A291207240F009283D1 /* AudioRecorderViewController.xib */; };
+		AB3B2A2E1207240F009283D1 /* microphoneForeground.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3B2A2A1207240F009283D1 /* microphoneForeground.png */; };
+		AB3B2A3412072419009283D1 /* AudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2A3112072419009283D1 /* AudioRecorderViewController.m */; };
+		AB3B2A3512072419009283D1 /* AudioMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2A3312072419009283D1 /* AudioMeter.m */; };
+		AB3B2A3E120725D5009283D1 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2A3D120725D5009283D1 /* AppModel.m */; };
+		AB3B2A5B12072ABF009283D1 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B2A5A12072ABF009283D1 /* CoreAudio.framework */; };
+		AB3B2A5D12072AC8009283D1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B2A5C12072AC8009283D1 /* AVFoundation.framework */; };
+		AB3B2AA8120731C2009283D1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2A99120731C2009283D1 /* ASIAuthenticationDialog.m */; };
+		AB3B2AA9120731C2009283D1 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2A9C120731C2009283D1 /* ASIDownloadCache.m */; };
+		AB3B2AAA120731C2009283D1 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2A9E120731C2009283D1 /* ASIFormDataRequest.m */; };
+		AB3B2AAB120731C2009283D1 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2AA0120731C2009283D1 /* ASIHTTPRequest.m */; };
+		AB3B2AAC120731C2009283D1 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2AA4120731C2009283D1 /* ASIInputStream.m */; };
+		AB3B2AAD120731C2009283D1 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2AA6120731C2009283D1 /* ASINetworkQueue.m */; };
+		AB3B2AB112073203009283D1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B2AB012073203009283D1 /* CFNetwork.framework */; };
+		AB3B2AB51207320F009283D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B2AB41207320F009283D1 /* SystemConfiguration.framework */; };
+		AB3B2AB912073215009283D1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B2AB812073215009283D1 /* MobileCoreServices.framework */; };
+		AB3B2ACA12073282009283D1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B2AC912073282009283D1 /* Reachability.m */; };
+		AB3B2AF112073312009283D1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B2AF012073312009283D1 /* libz.1.2.3.dylib */; };
+		AB5ED6D81207597100FEFA76 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ED6D71207597100FEFA76 /* CoreLocation.framework */; };
+		AB5ED70812075C0900FEFA76 /* WaitingIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5ED70712075C0900FEFA76 /* WaitingIndicatorViewController.m */; };
+		AB5ED70C12075C1200FEFA76 /* WaitingIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5ED70A12075C1200FEFA76 /* WaitingIndicator.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* WeBIRDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeBIRDAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* WeBIRDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeBIRDAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* WeBIRD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeBIRD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AB4B0D9B1048005BE974 /* WeBIRD_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeBIRD_Prefix.pch; sourceTree = "<group>"; };
+		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* WeBIRD-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeBIRD-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AB3B2A281207240F009283D1 /* microphoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphoneIcon.png; sourceTree = "<group>"; };
+		AB3B2A291207240F009283D1 /* AudioRecorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioRecorderViewController.xib; sourceTree = "<group>"; };
+		AB3B2A2A1207240F009283D1 /* microphoneForeground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphoneForeground.png; sourceTree = "<group>"; };
+		AB3B2A3012072419009283D1 /* AudioRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecorderViewController.h; sourceTree = "<group>"; };
+		AB3B2A3112072419009283D1 /* AudioRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecorderViewController.m; sourceTree = "<group>"; };
+		AB3B2A3212072419009283D1 /* AudioMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioMeter.h; sourceTree = "<group>"; };
+		AB3B2A3312072419009283D1 /* AudioMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioMeter.m; sourceTree = "<group>"; };
+		AB3B2A3712072531009283D1 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		AB3B2A3C120725D5009283D1 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		AB3B2A3D120725D5009283D1 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		AB3B2A5A12072ABF009283D1 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		AB3B2A5C12072AC8009283D1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AB3B2A98120731C2009283D1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		AB3B2A99120731C2009283D1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		AB3B2A9A120731C2009283D1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		AB3B2A9B120731C2009283D1 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		AB3B2A9C120731C2009283D1 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		AB3B2A9D120731C2009283D1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		AB3B2A9E120731C2009283D1 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		AB3B2A9F120731C2009283D1 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		AB3B2AA0120731C2009283D1 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		AB3B2AA1120731C2009283D1 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		AB3B2AA2120731C2009283D1 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		AB3B2AA3120731C2009283D1 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		AB3B2AA4120731C2009283D1 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		AB3B2AA5120731C2009283D1 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		AB3B2AA6120731C2009283D1 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		AB3B2AA7120731C2009283D1 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		AB3B2AB012073203009283D1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AB3B2AB41207320F009283D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AB3B2AB812073215009283D1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AB3B2AC812073282009283D1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AB3B2AC912073282009283D1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		AB3B2AF012073312009283D1 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		AB5ED6D71207597100FEFA76 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB5ED70612075C0900FEFA76 /* WaitingIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingIndicatorViewController.h; sourceTree = "<group>"; };
+		AB5ED70712075C0900FEFA76 /* WaitingIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingIndicatorViewController.m; sourceTree = "<group>"; };
+		AB5ED70A12075C1200FEFA76 /* WaitingIndicator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingIndicator.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				AB3B2A5B12072ABF009283D1 /* CoreAudio.framework in Frameworks */,
+				AB3B2A5D12072AC8009283D1 /* AVFoundation.framework in Frameworks */,
+				AB3B2AB112073203009283D1 /* CFNetwork.framework in Frameworks */,
+				AB3B2AB51207320F009283D1 /* SystemConfiguration.framework in Frameworks */,
+				AB3B2AB912073215009283D1 /* MobileCoreServices.framework in Frameworks */,
+				AB3B2AF112073312009283D1 /* libz.1.2.3.dylib in Frameworks */,
+				AB5ED6D81207597100FEFA76 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB3B2AC512073268009283D1 /* Reachability */,
+				AB3B2A9312073184009283D1 /* ASIHTTPRequest */,
+				AB3B2A3C120725D5009283D1 /* AppModel.h */,
+				AB3B2A3D120725D5009283D1 /* AppModel.m */,
+				AB3B2A3712072531009283D1 /* SynthesizeSingleton.h */,
+				AB3B2A3012072419009283D1 /* AudioRecorderViewController.h */,
+				AB3B2A3112072419009283D1 /* AudioRecorderViewController.m */,
+				AB3B2A3212072419009283D1 /* AudioMeter.h */,
+				AB3B2A3312072419009283D1 /* AudioMeter.m */,
+				1D3623240D0F684500981E51 /* WeBIRDAppDelegate.h */,
+				1D3623250D0F684500981E51 /* WeBIRDAppDelegate.m */,
+				AB5ED70612075C0900FEFA76 /* WaitingIndicatorViewController.h */,
+				AB5ED70712075C0900FEFA76 /* WaitingIndicatorViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* WeBIRD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* WeBIRD */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = WeBIRD;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AB4B0D9B1048005BE974 /* WeBIRD_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB5ED70A12075C1200FEFA76 /* WaitingIndicator.xib */,
+				AB3B2A281207240F009283D1 /* microphoneIcon.png */,
+				AB3B2A291207240F009283D1 /* AudioRecorderViewController.xib */,
+				AB3B2A2A1207240F009283D1 /* microphoneForeground.png */,
+				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* WeBIRD-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB3B2AF012073312009283D1 /* libz.1.2.3.dylib */,
+				AB3B2AB812073215009283D1 /* MobileCoreServices.framework */,
+				AB3B2AB41207320F009283D1 /* SystemConfiguration.framework */,
+				AB3B2AB012073203009283D1 /* CFNetwork.framework */,
+				AB3B2A5A12072ABF009283D1 /* CoreAudio.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				AB3B2A5C12072AC8009283D1 /* AVFoundation.framework */,
+				AB5ED6D71207597100FEFA76 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB3B2A9312073184009283D1 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AB3B2A98120731C2009283D1 /* ASIAuthenticationDialog.h */,
+				AB3B2A99120731C2009283D1 /* ASIAuthenticationDialog.m */,
+				AB3B2A9A120731C2009283D1 /* ASICacheDelegate.h */,
+				AB3B2A9B120731C2009283D1 /* ASIDownloadCache.h */,
+				AB3B2A9C120731C2009283D1 /* ASIDownloadCache.m */,
+				AB3B2A9D120731C2009283D1 /* ASIFormDataRequest.h */,
+				AB3B2A9E120731C2009283D1 /* ASIFormDataRequest.m */,
+				AB3B2A9F120731C2009283D1 /* ASIHTTPRequest.h */,
+				AB3B2AA0120731C2009283D1 /* ASIHTTPRequest.m */,
+				AB3B2AA1120731C2009283D1 /* ASIHTTPRequestConfig.h */,
+				AB3B2AA2120731C2009283D1 /* ASIHTTPRequestDelegate.h */,
+				AB3B2AA3120731C2009283D1 /* ASIInputStream.h */,
+				AB3B2AA4120731C2009283D1 /* ASIInputStream.m */,
+				AB3B2AA5120731C2009283D1 /* ASINetworkQueue.h */,
+				AB3B2AA6120731C2009283D1 /* ASINetworkQueue.m */,
+				AB3B2AA7120731C2009283D1 /* ASIProgressDelegate.h */,
+			);
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		AB3B2AC512073268009283D1 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				AB3B2AC812073282009283D1 /* Reachability.h */,
+				AB3B2AC912073282009283D1 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* WeBIRD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WeBIRD" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeBIRD;
+			productName = WeBIRD;
+			productReference = 1D6058910D05DD3D006BFB54 /* WeBIRD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WeBIRD" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* WeBIRD */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* WeBIRD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
+				AB3B2A2C1207240F009283D1 /* microphoneIcon.png in Resources */,
+				AB3B2A2D1207240F009283D1 /* AudioRecorderViewController.xib in Resources */,
+				AB3B2A2E1207240F009283D1 /* microphoneForeground.png in Resources */,
+				AB5ED70C12075C1200FEFA76 /* WaitingIndicator.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* WeBIRDAppDelegate.m in Sources */,
+				AB3B2A3412072419009283D1 /* AudioRecorderViewController.m in Sources */,
+				AB3B2A3512072419009283D1 /* AudioMeter.m in Sources */,
+				AB3B2A3E120725D5009283D1 /* AppModel.m in Sources */,
+				AB3B2AA8120731C2009283D1 /* ASIAuthenticationDialog.m in Sources */,
+				AB3B2AA9120731C2009283D1 /* ASIDownloadCache.m in Sources */,
+				AB3B2AAA120731C2009283D1 /* ASIFormDataRequest.m in Sources */,
+				AB3B2AAB120731C2009283D1 /* ASIHTTPRequest.m in Sources */,
+				AB3B2AAC120731C2009283D1 /* ASIInputStream.m in Sources */,
+				AB3B2AAD120731C2009283D1 /* ASINetworkQueue.m in Sources */,
+				AB3B2ACA12073282009283D1 /* Reachability.m in Sources */,
+				AB5ED70812075C0900FEFA76 /* WaitingIndicatorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WeBIRD_Prefix.pch;
+				INFOPLIST_FILE = "WeBIRD-Info.plist";
+				PRODUCT_NAME = WeBIRD;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WeBIRD_Prefix.pch;
+				INFOPLIST_FILE = "WeBIRD-Info.plist";
+				PRODUCT_NAME = WeBIRD;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WeBIRD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WeBIRD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
