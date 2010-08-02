@@ -7,14 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import "SynthesizeSingleton.h"
 
 @interface AppModel : NSObject {
 	NSString* serverURL;
+	CLLocation *currentUserLocation;
+
 }
 
 
 @property(assign,readonly) NSString* serverURL;
+@property (nonatomic, retain) CLLocation *currentUserLocation;
 
 
 

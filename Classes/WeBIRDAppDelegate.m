@@ -7,6 +7,7 @@
 //
 
 #import "WeBIRDAppDelegate.h"
+#import "AppModel.h"
 
 
 @implementation WeBIRDAppDelegate
@@ -14,7 +15,6 @@
 @synthesize window;
 @synthesize tabBarController;
 @synthesize locationManager;
-@synthesize currentUserLocation;
 @synthesize waitingIndicator;
 
 
@@ -124,7 +124,7 @@
 		  newLocation.coordinate.longitude,  newLocation.horizontalAccuracy, newLocation.verticalAccuracy );
 	
 	//Update the Model
-	self.currentUserLocation = newLocation;
+	[AppModel sharedAppModel].currentUserLocation = newLocation;
 	
 }
 

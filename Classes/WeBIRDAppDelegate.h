@@ -15,7 +15,6 @@
     UIWindow *window;
     UITabBarController *tabBarController;
 	CLLocationManager *locationManager;
-	CLLocation *currentUserLocation;
 	WaitingIndicatorViewController *waitingIndicator;
 
 }
@@ -23,7 +22,6 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) CLLocationManager *locationManager;
-@property (nonatomic, retain) CLLocation *currentUserLocation;
 @property (nonatomic, retain) WaitingIndicatorViewController *waitingIndicator;
 
 
