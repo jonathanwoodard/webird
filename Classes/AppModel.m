@@ -21,7 +21,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 
 -(id)init {
     if (self = [super init]) {
-		serverURL = @"http://atsosxdev.doit.wisc.edu/WeBIRD";
+		serverURL = @"http://ornithology.wisc.edu/webird";
 	}
 	
     return self;
@@ -33,7 +33,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 	
 	
 	// setting up the request object now
-	NSString *urlString = [NSString stringWithFormat:@"%@/birdMatcher.php", self.serverURL];
+	NSString *urlString = [NSString stringWithFormat:@"%@/birdMatcherTest.php", self.serverURL];
 	NSURL *url = [NSURL URLWithString:urlString];
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	

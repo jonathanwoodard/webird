@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		AB31067B12EA2F85003F6EC7 /* birdSonographPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = AB31067A12EA2F85003F6EC7 /* birdSonographPlaceHolder.png */; };
 		AB3B2A2C1207240F009283D1 /* microphoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3B2A281207240F009283D1 /* microphoneIcon.png */; };
 		AB3B2A2D1207240F009283D1 /* AudioRecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3B2A291207240F009283D1 /* AudioRecorderViewController.xib */; };
 		AB3B2A2E1207240F009283D1 /* microphoneBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3B2A2A1207240F009283D1 /* microphoneBackground.png */; };
@@ -41,6 +42,9 @@
 		AB7043C312076E7B00DECBA9 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7043C012076E7B00DECBA9 /* mapIcon.png */; };
 		AB7043C412076E7B00DECBA9 /* GPS.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7043C112076E7B00DECBA9 /* GPS.xib */; };
 		AB7044091207717E00DECBA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7044081207717E00DECBA9 /* MapKit.framework */; };
+		ABC27A6A12E8ED6D001EE5B9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC27A6912E8ED6D001EE5B9 /* CoreMedia.framework */; };
+		ABC27AF912E8FF16001EE5B9 /* AudioTrimmerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */; };
+		ABC27AFA12E8FF16001EE5B9 /* AudioTrimmerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC27AF812E8FF16001EE5B9 /* AudioTrimmerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,7 @@
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WeBIRD-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeBIRD-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AB31067A12EA2F85003F6EC7 /* birdSonographPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birdSonographPlaceHolder.png; sourceTree = "<group>"; };
 		AB3B2A281207240F009283D1 /* microphoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphoneIcon.png; sourceTree = "<group>"; };
 		AB3B2A291207240F009283D1 /* AudioRecorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioRecorderViewController.xib; sourceTree = "<group>"; };
 		AB3B2A2A1207240F009283D1 /* microphoneBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphoneBackground.png; sourceTree = "<group>"; };
@@ -100,6 +105,10 @@
 		AB7043C012076E7B00DECBA9 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
 		AB7043C112076E7B00DECBA9 /* GPS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPS.xib; sourceTree = "<group>"; };
 		AB7044081207717E00DECBA9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ABC27A6912E8ED6D001EE5B9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioTrimmerViewController.h; path = ../AudioTrimmerViewController.h; sourceTree = "<group>"; };
+		ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioTrimmerViewController.m; path = ../AudioTrimmerViewController.m; sourceTree = "<group>"; };
+		ABC27AF812E8FF16001EE5B9 /* AudioTrimmerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTrimmerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,7 @@
 				AB3B2AF112073312009283D1 /* libz.1.2.3.dylib in Frameworks */,
 				AB5ED6D81207597100FEFA76 /* CoreLocation.framework in Frameworks */,
 				AB7044091207717E00DECBA9 /* MapKit.framework in Frameworks */,
+				ABC27A6A12E8ED6D001EE5B9 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +146,8 @@
 				AB3B2A3112072419009283D1 /* AudioRecorderViewController.m */,
 				AB3B2A3212072419009283D1 /* AudioMeter.h */,
 				AB3B2A3312072419009283D1 /* AudioMeter.m */,
+				ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */,
+				ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */,
 				1D3623240D0F684500981E51 /* WeBIRDAppDelegate.h */,
 				1D3623250D0F684500981E51 /* WeBIRDAppDelegate.m */,
 				AB5ED70612075C0900FEFA76 /* WaitingIndicatorViewController.h */,
@@ -165,6 +177,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				AB7044081207717E00DECBA9 /* MapKit.framework */,
+				ABC27A6912E8ED6D001EE5B9 /* CoreMedia.framework */,
 			);
 			name = WeBIRD;
 			sourceTree = "<group>";
@@ -181,10 +194,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB31067A12EA2F85003F6EC7 /* birdSonographPlaceHolder.png */,
 				AB5ED70A12075C1200FEFA76 /* WaitingIndicator.xib */,
 				AB3B2A281207240F009283D1 /* microphoneIcon.png */,
 				AB3B2A2A1207240F009283D1 /* microphoneBackground.png */,
 				AB3B2A291207240F009283D1 /* AudioRecorderViewController.xib */,
+				ABC27AF812E8FF16001EE5B9 /* AudioTrimmerViewController.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* WeBIRD-Info.plist */,
 				AB7043C112076E7B00DECBA9 /* GPS.xib */,
@@ -270,7 +285,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WeBIRD" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* WeBIRD */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +315,8 @@
 				AB7043C212076E7B00DECBA9 /* locateMeIcon.png in Resources */,
 				AB7043C312076E7B00DECBA9 /* mapIcon.png in Resources */,
 				AB7043C412076E7B00DECBA9 /* GPS.xib in Resources */,
+				ABC27AFA12E8FF16001EE5B9 /* AudioTrimmerViewController.xib in Resources */,
+				AB31067B12EA2F85003F6EC7 /* birdSonographPlaceHolder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +342,7 @@
 				AB5ED70812075C0900FEFA76 /* WaitingIndicatorViewController.m in Sources */,
 				AB7043BD12076E6B00DECBA9 /* GPSViewController.m in Sources */,
 				AB7043BE12076E6B00DECBA9 /* Annotation.m in Sources */,
+				ABC27AF912E8FF16001EE5B9 /* AudioTrimmerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Gagnon (56YHU87885)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -335,6 +361,8 @@
 				GCC_PREFIX_HEADER = WeBIRD_Prefix.pch;
 				INFOPLIST_FILE = "WeBIRD-Info.plist";
 				PRODUCT_NAME = WeBIRD;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A2624FB7-C646-48D6-B52E-FEB2EEA53FE4";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -347,6 +375,7 @@
 				GCC_PREFIX_HEADER = WeBIRD_Prefix.pch;
 				INFOPLIST_FILE = "WeBIRD-Info.plist";
 				PRODUCT_NAME = WeBIRD;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -360,7 +389,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -374,7 +403,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
