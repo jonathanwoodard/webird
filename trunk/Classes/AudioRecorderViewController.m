@@ -6,8 +6,12 @@
 //  Copyright 2010 University of Wisconsin - Madison. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
+#import <CoreMedia/CoreMedia.h>
+
 #import "AudioRecorderViewController.h"
 #import "AppModel.h";
+#import "AudioTrimmerViewController.h"
 
 
 @implementation AudioRecorderViewController
@@ -33,6 +37,16 @@
  - (void)loadView {
  }
  */
+
+
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	 // Return YES for supported orientations.
+	 //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	 return YES;
+ }
+ 
+
 
 
 
@@ -163,6 +177,7 @@
 			[self.soundPlayer stop];
 			mode = kAudioRecorderRecordingComplete;
 			[self updateButtonsForCurrentMode];
+			
 			break;	
 			
 		case kAudioRecorderRecordingComplete:
@@ -172,17 +187,88 @@
 			
 			if (nil == self.soundPlayer) {
 				NSError *error;
-				AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:self.soundFileURL error: &error];
-				self.soundPlayer = newPlayer;
-				[newPlayer release];
-				[self.soundPlayer prepareToPlay];
-				[self.soundPlayer setDelegate: self];
+				
+				/*
+				 Let's take a minute to play with splicing up the clip
+				*/
+				NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+				AVURLAsset *asset = [AVURLAsset URLAssetWithURL:self.soundFileURL options:options];
+				NSArray *keys = [NSArray arrayWithObject:@"duration"];
+				/*
+				[asset loadValuesAsynchronouslyForKeys:keys completionHandler:^(void) {
+					NSError *error = nil;
+					AVKeyValueStatus durationStatus = [asset statusOfValueForKey:@"duration" error:&error];
+					switch (durationStatus) {
+						case AVKeyValueStatusLoaded:
+							NSLog(@"Duration Loaded: %@",[asset valueForKey:@"duration"]);
+							break;
+						case AVKeyValueStatusFailed:
+							NSLog(@"ERROR Loading Asset");
+							break;
+						case AVKeyValueStatusCancelled:
+							// Do whatever is appropriate for cancelation.
+							break;
+					}
+				}];
+				 */
+				
+				//export it to a file
+				NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:asset];
+				if ([compatiblePresets containsObject:AVAssetExportPresetAppleM4A]) {
+					AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]
+														   initWithAsset:asset presetName:AVAssetExportPresetAppleM4A];
+
+									
+					NSString *soundFilePath = [NSTemporaryDirectory ()
+											stringByAppendingPathComponent: @"exported.m4a"];
+
+					
+					NSURL *trimmedURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
+					exportSession.outputURL = trimmedURL;
+					
+					NSFileManager *fileManager = [NSFileManager defaultManager];
+					[fileManager removeItemAtPath:soundFilePath error:NULL];
+					
+					
+					
+					exportSession.outputFileType = @"com.apple.m4a-audio";
+					CMTime start = CMTimeMakeWithSeconds(1.0, 600);
+					CMTime duration = CMTimeMakeWithSeconds(1.0, 600);
+					CMTimeRange range = CMTimeRangeMake(start, duration);
+					exportSession.timeRange = range;
+					
+					[exportSession exportAsynchronouslyWithCompletionHandler:^{
+						NSLog(@"Session Export complete!");
+						switch ([exportSession status]) {
+							case AVAssetExportSessionStatusFailed:
+								NSLog(@"Export failed: %@", [[exportSession error] localizedDescription]);
+								break;
+							case AVAssetExportSessionStatusCancelled:
+								NSLog(@"Export canceled");
+								break;
+							default:
+								NSLog(@"Export Was Ok");
+								
+								AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:trimmedURL error: nil];
+								self.soundPlayer = newPlayer;
+								[newPlayer release];
+								[self.soundPlayer setDelegate: self];
+								mode = kAudioRecorderPlaying;
+								[self updateButtonsForCurrentMode];
+								[self.soundPlayer prepareToPlay];
+								[self.soundPlayer play];
+								break;
+						}
+						[exportSession release];
+					}];
+					
+					
+				}
+				
+
 			}	
 			
-			mode = kAudioRecorderPlaying;
-			[self updateButtonsForCurrentMode];
-			
-			[self.soundPlayer play];
+
 			break;
 			
 		case kAudioRecorderRecording:
@@ -249,6 +335,11 @@
 	
 	mode = kAudioRecorderRecordingComplete;
 	[self updateButtonsForCurrentMode];
+	
+	//Lets get the trimmer onscreen
+	NSLog(@"AudioRecorderViewController: Recording Complete. Display the Trimmer");
+	AudioTrimmerViewController *trimmerVC = [[AudioTrimmerViewController alloc] initWithNibName:@"AudioTrimmerViewController" bundle:nil];
+	[self.navigationController pushViewController:trimmerVC animated:YES];
 	
 	
 }
