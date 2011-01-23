@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreAudio/CoreAudioTypes.h>
 
+typedef enum {
+	kAudioTrimmerIn,
+	kAudioTrimmerOut
+} AudioTrimmerInOrOut;
+
+typedef enum {
+	kAudioTrimmerModeReadyToPlay,
+	kAudioTrimmerModePlaying,
+} AudioTrimmerMode;
 
 @interface AudioTrimmerViewController : UIViewController {
 	IBOutlet UIView*	trimInBar;
@@ -15,7 +26,32 @@
 	IBOutlet UIButton*	deleteButton;
 	IBOutlet UIButton*	playButton;
 	IBOutlet UIButton*	analyzeButton;
+	IBOutlet UIView*	spectrogramView;
+	
+	AudioTrimmerInOrOut selectedTrimmer;
+	AudioTrimmerMode mode;
+	
+	NSURL *soundFileURL;
+	AVURLAsset *soundFileAsset;
+	CMTime soundFileDuration;
+
+
+	NSURL *trimmedSoundFileURL;
+	
+	AVAudioPlayer *soundPlayer;
 }
+
+@property(readwrite, retain) NSURL *soundFileURL;
+@property(readwrite, retain) NSURL *trimmedSoundFileURL;
+@property(readwrite, retain) AVURLAsset *soundFileAsset;
+@property(readwrite, retain) AVAudioPlayer *soundPlayer;
+
+
+- (id)initWithSoundFileURL:(NSURL*)url;
+- (void) updateButtonsForCurrentMode;
+- (Float64)secondsForXPosition: (CGFloat)xPos;
+- (CMTimeRange)trimedTimeRange;
+
 
 - (IBAction) deleteButtonAction: (id) sender;
 - (IBAction) playButtonAction: (id) sender;

@@ -26,7 +26,7 @@
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-			
+		self.title = @"Recorder";	
     }
     return self;
 }
@@ -48,18 +48,15 @@
  
 
 
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	meter = [[AudioMeter alloc]initWithFrame:CGRectMake(0, 0, 320, 420)];
+	meter = [[AudioMeter alloc]initWithFrame:CGRectMake(0, 0, 320, 420)]; //TODO: Make meter resize
 	meter.alpha = 0.0;
 	[self.view addSubview:meter];
 	[self.view sendSubviewToBack:meter];
 	
-
 	NSString *tempDir = NSTemporaryDirectory ();
     NSString *soundFilePath =[tempDir stringByAppendingString: @"sound.caf"];
 	
@@ -69,7 +66,7 @@
 	
 	[[AVAudioSession sharedInstance] setDelegate: self];
 	
-	mode = kAudioRecorderStarting; 
+	mode = kAudioRecorderReady; 
 	[self updateButtonsForCurrentMode];
 }
 
@@ -91,31 +88,13 @@
 }
 
 - (void)updateButtonsForCurrentMode{
-	[uploadButton setTitle: @"Upload" forState: UIControlStateNormal];
-	[discardButton setTitle: @"Delete" forState: UIControlStateNormal];
 	
 	switch (mode) {
-		case kAudioRecorderStarting:
+		case kAudioRecorderReady:
 			[recordStopOrPlayButton setTitle: @"Begin Recording" forState: UIControlStateNormal];
-			uploadButton.hidden = YES;
-			discardButton.hidden = YES;
 			break;
 		case kAudioRecorderRecording:
 			[recordStopOrPlayButton setTitle: @"Stop Recording" forState: UIControlStateNormal];
-			uploadButton.hidden = YES;
-			discardButton.hidden = YES;
-			break;
-		case kAudioRecorderRecordingComplete:
-			[recordStopOrPlayButton setTitle: @"Play" forState: UIControlStateNormal];
-			uploadButton.hidden = NO;
-			discardButton.hidden = NO;
-			break;
-		case kAudioRecorderPlaying:
-			[recordStopOrPlayButton setTitle: @"Stop" forState: UIControlStateNormal];
-			uploadButton.hidden = YES;
-			discardButton.hidden = YES;
-			break;
-		default:
 			break;
 	}
 }
@@ -125,7 +104,7 @@
 	NSLog(@"AudioRecorder: Record/Play/Stop Button selected");
 	
 	switch (mode) {
-		case kAudioRecorderStarting:
+		case kAudioRecorderReady:
 			NSLog(@"AudioRecorder: Record/Play/Stop Button selected");
 			
 			[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryRecord error: nil];	
@@ -173,110 +152,12 @@
 			[self updateButtonsForCurrentMode];						
 			break;
 			
-		case kAudioRecorderPlaying:
-			[self.soundPlayer stop];
-			mode = kAudioRecorderRecordingComplete;
-			[self updateButtonsForCurrentMode];
-			
-			break;	
-			
-		case kAudioRecorderRecordingComplete:
-			[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];	
-			
-			[[AVAudioSession sharedInstance] setActive: YES error: nil];
-			
-			if (nil == self.soundPlayer) {
-				NSError *error;
-				
-				/*
-				 Let's take a minute to play with splicing up the clip
-				*/
-				NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
-				AVURLAsset *asset = [AVURLAsset URLAssetWithURL:self.soundFileURL options:options];
-				NSArray *keys = [NSArray arrayWithObject:@"duration"];
-				/*
-				[asset loadValuesAsynchronouslyForKeys:keys completionHandler:^(void) {
-					NSError *error = nil;
-					AVKeyValueStatus durationStatus = [asset statusOfValueForKey:@"duration" error:&error];
-					switch (durationStatus) {
-						case AVKeyValueStatusLoaded:
-							NSLog(@"Duration Loaded: %@",[asset valueForKey:@"duration"]);
-							break;
-						case AVKeyValueStatusFailed:
-							NSLog(@"ERROR Loading Asset");
-							break;
-						case AVKeyValueStatusCancelled:
-							// Do whatever is appropriate for cancelation.
-							break;
-					}
-				}];
-				 */
-				
-				//export it to a file
-				NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:asset];
-				if ([compatiblePresets containsObject:AVAssetExportPresetAppleM4A]) {
-					AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]
-														   initWithAsset:asset presetName:AVAssetExportPresetAppleM4A];
-
-									
-					NSString *soundFilePath = [NSTemporaryDirectory ()
-											stringByAppendingPathComponent: @"exported.m4a"];
-
-					
-					NSURL *trimmedURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
-					exportSession.outputURL = trimmedURL;
-					
-					NSFileManager *fileManager = [NSFileManager defaultManager];
-					[fileManager removeItemAtPath:soundFilePath error:NULL];
-					
-					
-					
-					exportSession.outputFileType = @"com.apple.m4a-audio";
-					CMTime start = CMTimeMakeWithSeconds(1.0, 600);
-					CMTime duration = CMTimeMakeWithSeconds(1.0, 600);
-					CMTimeRange range = CMTimeRangeMake(start, duration);
-					exportSession.timeRange = range;
-					
-					[exportSession exportAsynchronouslyWithCompletionHandler:^{
-						NSLog(@"Session Export complete!");
-						switch ([exportSession status]) {
-							case AVAssetExportSessionStatusFailed:
-								NSLog(@"Export failed: %@", [[exportSession error] localizedDescription]);
-								break;
-							case AVAssetExportSessionStatusCancelled:
-								NSLog(@"Export canceled");
-								break;
-							default:
-								NSLog(@"Export Was Ok");
-								
-								AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:trimmedURL error: nil];
-								self.soundPlayer = newPlayer;
-								[newPlayer release];
-								[self.soundPlayer setDelegate: self];
-								mode = kAudioRecorderPlaying;
-								[self updateButtonsForCurrentMode];
-								[self.soundPlayer prepareToPlay];
-								[self.soundPlayer play];
-								break;
-						}
-						[exportSession release];
-					}];
-					
-					
-				}
-				
-
-			}	
-			
-
-			break;
-			
 		case kAudioRecorderRecording:
 			[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];	
 			
 			[soundRecorder stop];
 			self.soundRecorder = nil;
-			mode = kAudioRecorderRecordingComplete;			
+			mode = kAudioRecorderReady;			
 			[self updateButtonsForCurrentMode];
 			break;	
 			
@@ -287,22 +168,7 @@
 }
 
 
-- (IBAction) uploadButtonAction: (id) sender{
-	self.audioData = [NSData dataWithContentsOfURL:soundFileURL];
-	self.soundRecorder = nil;
-	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];
-	
-	[[AppModel sharedAppModel] uploadFile:audioData];
 
-}	
-
-
-
-- (IBAction) discardButtonAction: (id) sender{
-	soundPlayer = nil;
-	mode = kAudioRecorderStarting;
-	[self updateButtonsForCurrentMode];
-}
 
 
 
@@ -333,32 +199,17 @@
 	[self.meter updateLevel:0];
 	self.meter.alpha = 0.0; 
 	
-	mode = kAudioRecorderRecordingComplete;
+	mode = kAudioRecorderReady;
 	[self updateButtonsForCurrentMode];
 	
 	//Lets get the trimmer onscreen
 	NSLog(@"AudioRecorderViewController: Recording Complete. Display the Trimmer");
-	AudioTrimmerViewController *trimmerVC = [[AudioTrimmerViewController alloc] initWithNibName:@"AudioTrimmerViewController" bundle:nil];
+	AudioTrimmerViewController *trimmerVC = [[AudioTrimmerViewController alloc] initWithSoundFileURL:self.soundFileURL ];
 	[self.navigationController pushViewController:trimmerVC animated:YES];
 	
 	
 }
 
-#pragma mark Audio Player Delegate Methods
-
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-	NSLog(@"audioPlayerDidFinishPlaying");
-	
-	soundPlayer = nil;
-	
-	mode = kAudioRecorderRecordingComplete;
-	[self updateButtonsForCurrentMode];
-	
-}
-
-- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
-	NSLog(@"AudioRecorder: Playback Error");
-}
 
 
 @end

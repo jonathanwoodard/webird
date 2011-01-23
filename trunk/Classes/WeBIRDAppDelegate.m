@@ -8,6 +8,7 @@
 
 #import "WeBIRDAppDelegate.h"
 #import "AppModel.h"
+#import "AudioRecorderViewController.h"
 
 
 @implementation WeBIRDAppDelegate
@@ -35,7 +36,12 @@
 	
     // Add the tab bar controller's view to the window and display.
 	NSLog(@"WeBIRDAppDelegate: Configure UI");
-    [window addSubview:tabBarController.view];
+    //[window addSubview:tabBarController.view];
+	AudioRecorderViewController *audioRecorderVC = [[AudioRecorderViewController alloc] initWithNibName:@"AudioRecorderViewController" bundle:nil];
+	UINavigationController *audioRecorderNav = [[UINavigationController alloc] initWithRootViewController:audioRecorderVC];
+	[window addSubview:audioRecorderNav.view];
+	
+	
     [window makeKeyAndVisible];
 
     return YES;
