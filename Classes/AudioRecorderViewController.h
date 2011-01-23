@@ -13,11 +13,9 @@
 #import "AudioMeter.h"
 
 typedef enum {
-	kAudioRecorderStarting,
+	kAudioRecorderReady,
 	kAudioRecorderRecording,
-	kAudioRecorderRecordingComplete,
-	kAudioRecorderPlaying
-} modeType;
+} AudioRecorderModeType;
 
 
 @interface AudioRecorderViewController : UIViewController <AVAudioSessionDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate> {
@@ -30,7 +28,7 @@ typedef enum {
 	IBOutlet UIButton *recordStopOrPlayButton;
 	IBOutlet UIButton *uploadButton;
 	IBOutlet UIButton *discardButton;
-	modeType mode;
+	AudioRecorderModeType mode;
 	BOOL recording;
 	BOOL playing;
 	NSTimer *meterUpdateTimer;
