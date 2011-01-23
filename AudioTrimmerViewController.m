@@ -156,13 +156,12 @@
 }
 
 
-- (void)trimAudio{
-	/*
-	//export it to a file
-	NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:asset];
+- (void)calculateTrimmedAudio{
+
+	NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:self.soundFileAsset];
 	if ([compatiblePresets containsObject:AVAssetExportPresetAppleM4A]) {
 		AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]
-											   initWithAsset:asset presetName:AVAssetExportPresetAppleM4A];
+											   initWithAsset:self.soundFileAsset presetName:AVAssetExportPresetAppleM4A];
 		
 		
 		NSString *soundFilePath = [NSTemporaryDirectory ()
@@ -175,13 +174,9 @@
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		[fileManager removeItemAtPath:soundFilePath error:NULL];
 		
-		
-		
 		exportSession.outputFileType = @"com.apple.m4a-audio";
-		CMTime start = CMTimeMakeWithSeconds(1.0, 600);
-		CMTime duration = CMTimeMakeWithSeconds(1.0, 600);
-		CMTimeRange range = CMTimeRangeMake(start, duration);
-		exportSession.timeRange = range;
+
+		exportSession.timeRange = [self trimedTimeRange];
 		
 		[exportSession exportAsynchronouslyWithCompletionHandler:^{
 			NSLog(@"Session Export complete!");
@@ -202,10 +197,11 @@
 			[exportSession release];
 		}];
 		
+		self.trimmedSoundFileURL = trimmedURL;
+		
 		
 	}
 	 
-	 */
 }
 
 - (void)updateButtonsForCurrentMode{
@@ -267,6 +263,8 @@
 	NSLog(@"AudioTrimmerVC: Touches ended. Trim region starts at %f and is %f in duration",
 		  CMTimeGetSeconds(range.start),
 		  CMTimeGetSeconds(range.duration) );
+	
+	[self calculateTrimmedAudio];
 	
 }
 
