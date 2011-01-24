@@ -29,7 +29,8 @@
 		NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
 		self.soundFileAsset = [AVURLAsset URLAssetWithURL:self.soundFileURL options:options];
 
-		//Sgtart Calculating the Duration
+		
+		//Start Calculating the Duration
 		NSArray *keys = [NSArray arrayWithObject:@"duration"];
 		[self.soundFileAsset loadValuesAsynchronouslyForKeys:keys completionHandler:^(void) {
 			NSError *error = nil;
@@ -38,6 +39,8 @@
 				case AVKeyValueStatusLoaded:
 					soundFileDuration = [self.soundFileAsset duration];
 					NSLog(@"Duration Loaded: %f Seconds", CMTimeGetSeconds(soundFileDuration));
+					[self calculateTrimmedAudio];
+					[self moveTrimBarsToTimeRange: CMTimeRangeMake(CMTimeMakeWithSeconds(0.0f, 600),soundFileDuration)];
 					break;
 				case AVKeyValueStatusFailed:
 					NSLog(@"ERROR Loading Asset");
@@ -60,9 +63,6 @@
 	
 	[[AVAudioSession sharedInstance] setDelegate: self];
 	
-	mode = kAudioTrimmerModeReadyToPlay; 
-	[self updateButtonsForCurrentMode];
-	
 }
 
 
@@ -73,6 +73,11 @@
 	return YES;
 }
 
+- (void)willAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -93,16 +98,19 @@
 }
 
 
+#pragma mark Button Actions
+
+
 - (IBAction) playButtonAction: (id)sender{
 	switch (mode) {
 
 		case kAudioTrimmerModePlaying:
 			[self.soundPlayer stop];
-			mode = kAudioTrimmerModeReadyToPlay;
+			mode = kAudioTrimmerModeReady;
 			[self updateButtonsForCurrentMode];
 			break;	
 			
-		case kAudioTrimmerModeReadyToPlay:
+		case kAudioTrimmerModeReady:
 			[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];	
 			
 			[[AVAudioSession sharedInstance] setActive: YES error: nil];
@@ -123,30 +131,25 @@
 }
 
 - (IBAction) analyzeButtonAction: (id) sender{
-	NSData *audioData = [NSData dataWithContentsOfURL:soundFileURL];
+	NSData *audioData = [NSData dataWithContentsOfURL:trimmedSoundFileURL];
 	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];	
 	[[AppModel sharedAppModel] uploadFile:audioData];
 }	
 
-
-
 - (IBAction) deleteButtonAction: (id) sender{
-	soundPlayer = nil;
-	mode = kAudioTrimmerModeReadyToPlay;
-	[self updateButtonsForCurrentMode];
 	
 	[self.navigationController popViewControllerAnimated:YES]; 
 }
 
 
-#pragma mark Audio Player Delegate Methods
+#pragma mark AVAudioPlayer Delegate
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
 	NSLog(@"audioPlayerDidFinishPlaying");
 	
 	soundPlayer = nil;
 	
-	mode = kAudioTrimmerModeReadyToPlay;
+	mode = kAudioTrimmerModeReady;
 	[self updateButtonsForCurrentMode];
 	
 }
@@ -154,70 +157,6 @@
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
 	NSLog(@"AudioRecorder: Playback Error");
 }
-
-
-- (void)calculateTrimmedAudio{
-
-	NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:self.soundFileAsset];
-	if ([compatiblePresets containsObject:AVAssetExportPresetAppleM4A]) {
-		AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]
-											   initWithAsset:self.soundFileAsset presetName:AVAssetExportPresetAppleM4A];
-		
-		
-		NSString *soundFilePath = [NSTemporaryDirectory ()
-								   stringByAppendingPathComponent: @"exported.m4a"];
-		
-		
-		NSURL *trimmedURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
-		exportSession.outputURL = trimmedURL;
-		
-		NSFileManager *fileManager = [NSFileManager defaultManager];
-		[fileManager removeItemAtPath:soundFilePath error:NULL];
-		
-		exportSession.outputFileType = @"com.apple.m4a-audio";
-
-		exportSession.timeRange = [self trimedTimeRange];
-		
-		[exportSession exportAsynchronouslyWithCompletionHandler:^{
-			NSLog(@"Session Export complete!");
-			switch ([exportSession status]) {
-				case AVAssetExportSessionStatusFailed:
-					NSLog(@"Export failed: %@", [[exportSession error] localizedDescription]);
-					break;
-				case AVAssetExportSessionStatusCancelled:
-					NSLog(@"Export canceled");
-					break;
-				default:
-					NSLog(@"Export Was Ok");
-					
-					//All Done!
-					
-					break;
-			}
-			[exportSession release];
-		}];
-		
-		self.trimmedSoundFileURL = trimmedURL;
-		
-		
-	}
-	 
-}
-
-- (void)updateButtonsForCurrentMode{
-	
-	switch (mode) {
-		case kAudioTrimmerModeReadyToPlay:
-			[playButton setTitle: @"Play" forState: UIControlStateNormal];
-			break;
-		case kAudioTrimmerModePlaying:
-			[playButton setTitle: @"Stop" forState: UIControlStateNormal];
-			break;
-		default:
-			break;
-	}
-}
-
 
 
 #pragma mark Managing Touches
@@ -258,7 +197,7 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	CMTimeRange range = [self trimedTimeRange];
+	CMTimeRange range = [self trimmedTimeRange];
 
 	NSLog(@"AudioTrimmerVC: Touches ended. Trim region starts at %f and is %f in duration",
 		  CMTimeGetSeconds(range.start),
@@ -268,7 +207,106 @@
 	
 }
 
--(CMTimeRange)trimedTimeRange {
+
+#pragma mark Utilities
+
+- (void)moveTrimBarsToTimeRange: (CMTimeRange)range{
+	
+	CGFloat inBarX = [self xPositionForSeconds: CMTimeGetSeconds(range.start)];
+	CGFloat outBarX = [self xPositionForSeconds: CMTimeGetSeconds(range.duration) - CMTimeGetSeconds(range.start)];
+	
+	NSLog(@"AudioTrimmerVC: moveTrimBarsToTimeRange: inBarX:%f outBarX:%f",inBarX,outBarX);
+	
+	CGRect inFrame = CGRectMake(inBarX - trimInBar.frame.size.width, spectrogramView.frame.origin.y, trimInBar.frame.size.width , spectrogramView.frame.size.height);
+	trimInBar.frame = inFrame;
+	
+	CGRect outFrame = CGRectMake(outBarX, spectrogramView.frame.origin.y, trimOutBar.frame.size.width , spectrogramView.frame.size.height);
+	trimOutBar.frame = outFrame;
+	
+}
+- (void)updateButtonsForCurrentMode{
+	
+	switch (mode) {
+		case kAudioTrimmerModeReady:
+			NSLog(@"Setting title to play");
+			playButton.enabled = YES;
+			analyzeButton.enabled = YES;
+			playButton.alpha = 1.0f;
+			analyzeButton.alpha = 1.0f;
+			[playButton setTitle: @"Play" forState: UIControlStateNormal];
+			break;
+		case kAudioTrimmerModePlaying:
+			playButton.enabled = YES;
+			analyzeButton.enabled = YES;
+			playButton.alpha = 0.8f;
+			analyzeButton.alpha = 0.8f;
+			[playButton setTitle: @"Stop" forState: UIControlStateNormal];
+			break;
+		case kAudioTrimmerModeTrimming:
+			NSLog(@"Setting title to preparing");
+			playButton.enabled = NO;
+			analyzeButton.enabled = NO;
+			playButton.alpha = 0.8f;
+			analyzeButton.alpha = 0.8f;
+			[playButton setTitle: @"Preparing" forState: UIControlStateNormal];
+			break;	
+		default:
+			break;
+	}
+	
+	[playButton setNeedsDisplay];
+}
+
+- (void)calculateTrimmedAudio{
+	
+	NSLog(@"AudioTrimmerVC: calculateTrimmedAudio");
+	mode = kAudioTrimmerModeTrimming;
+	[self updateButtonsForCurrentMode];
+	
+	NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:self.soundFileAsset];
+	if ([compatiblePresets containsObject:AVAssetExportPresetAppleM4A]) {
+		AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]
+											   initWithAsset:self.soundFileAsset presetName:AVAssetExportPresetAppleM4A];
+		
+		
+		NSString *soundFilePath = [NSTemporaryDirectory ()
+								   stringByAppendingPathComponent: @"exported.m4a"];
+		
+		
+		NSURL *trimmedURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
+		exportSession.outputURL = trimmedURL;
+		
+		NSFileManager *fileManager = [NSFileManager defaultManager];
+		[fileManager removeItemAtPath:soundFilePath error:NULL];
+		
+		exportSession.outputFileType = @"com.apple.m4a-audio";
+		
+		exportSession.timeRange = [self trimmedTimeRange];
+		
+		[exportSession exportAsynchronouslyWithCompletionHandler:^{
+			switch ([exportSession status]) {
+				case AVAssetExportSessionStatusFailed:
+					NSLog(@"AudioTrimmerVC: Calculating Trim Failed: %@", [[exportSession error] localizedDescription]);
+					break;
+				case AVAssetExportSessionStatusCancelled:
+					NSLog(@"AudioTrimmerVC: Calculating Trim Canceled");
+					break;
+				default:
+					NSLog(@"AudioTrimmerVC: Calculating Trim Complete");
+					mode = kAudioTrimmerModeReady;
+					[self updateButtonsForCurrentMode];
+					break;
+			}
+			[exportSession release];
+		}];
+		
+		self.trimmedSoundFileURL = trimmedURL;
+	}
+	
+}
+
+
+-(CMTimeRange)trimmedTimeRange {
 	Float64 startTimeInSeconds = [self secondsForXPosition: trimInBar.frame.origin.x + trimInBar.frame.size.width];
 	Float64 endTimeInSeconds = [self secondsForXPosition:trimOutBar.frame.origin.x];
 	Float64 durationInSeconds = endTimeInSeconds - startTimeInSeconds;
@@ -294,5 +332,16 @@
 	return timeIn;
 }
 
+ -(CGFloat)xPositionForSeconds: (Float64)seconds {
+	 Float64 timePerPixel = CMTimeGetSeconds(soundFileDuration)/spectrogramView.frame.size.width;
+	 NSLog(@"AudioTrimmerVC: xPositionForSeconds: timePerPixel is %f",timePerPixel);
+	 
+	 //how many pixels into the spectrogram + spectrogram origin?
+	 CGFloat xPos =  seconds / timePerPixel + spectrogramView.frame.origin.x; 
+	 NSLog(@"AudioTrimmerVC: PositionForSeconds: This is %f pixels into the view", xPos);
+	 
+	 return xPos;
+ }		 
+		 
 
 @end

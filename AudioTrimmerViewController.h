@@ -16,11 +16,12 @@ typedef enum {
 } AudioTrimmerInOrOut;
 
 typedef enum {
-	kAudioTrimmerModeReadyToPlay,
+	kAudioTrimmerModeTrimming,
+	kAudioTrimmerModeReady,
 	kAudioTrimmerModePlaying,
 } AudioTrimmerMode;
 
-@interface AudioTrimmerViewController : UIViewController {
+@interface AudioTrimmerViewController : UIViewController <AVAudioPlayerDelegate> {
 	IBOutlet UIView*	trimInBar;
 	IBOutlet UIView*	trimOutBar;
 	IBOutlet UIButton*	deleteButton;
@@ -50,8 +51,10 @@ typedef enum {
 - (id)initWithSoundFileURL:(NSURL*)url;
 - (void) updateButtonsForCurrentMode;
 - (Float64)secondsForXPosition: (CGFloat)xPos;
-- (CMTimeRange)trimedTimeRange;
-
+- (CGFloat)xPositionForSeconds: (Float64)seconds;      
+- (CMTimeRange)trimmedTimeRange;
+- (void)moveTrimBarsToTimeRange: (CMTimeRange)range;
+- (void)calculateTrimmedAudio;
 
 - (IBAction) deleteButtonAction: (id) sender;
 - (IBAction) playButtonAction: (id) sender;
