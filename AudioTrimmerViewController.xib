@@ -45,7 +45,7 @@
 					<object class="IBUIImageView" id="776621562">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">306</int>
-						<string key="NSFrame">{{10, 0}, {300, 320}}</string>
+						<string key="NSFrame">{{20, 0}, {280, 320}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -124,25 +124,20 @@
 					<object class="IBUIImageView" id="881798305">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">304</int>
-						<string key="NSFrame">{{20, 0}, {10, 320}}</string>
+						<string key="NSFrame">{{77, 0}, {20, 320}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="IBUIBackgroundColor" ref="897846598"/>
 						<int key="IBUIContentMode">3</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage" id="365110929">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">mapIcon.png</string>
-						</object>
 					</object>
 					<object class="IBUIImageView" id="562530441">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">304</int>
-						<string key="NSFrame">{{268, 0}, {10, 320}}</string>
+						<string key="NSFrame">{{217, 0}, {20, 320}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="IBUIBackgroundColor" ref="897846598"/>
 						<int key="IBUIContentMode">3</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<reference key="IBUIImage" ref="365110929"/>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 416}</string>
@@ -340,11 +335,11 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAw6aAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAw58AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDkQAAw58AAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDhgAAw58AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -705,17 +700,8 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">WeBIRD.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<object class="NSArray" key="dict.sortedKeys">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>birdSonographPlaceHolder.png</string>
-				<string>mapIcon.png</string>
-			</object>
-			<object class="NSMutableArray" key="dict.values">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{1036, 324}</string>
-				<string>{30, 30}</string>
-			</object>
+			<string key="NS.key.0">birdSonographPlaceHolder.png</string>
+			<string key="NS.object.0">{1036, 324}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>
