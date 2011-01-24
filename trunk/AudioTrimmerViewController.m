@@ -28,7 +28,6 @@
 		//Set up the sound as an asset
 		NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
 		self.soundFileAsset = [AVURLAsset URLAssetWithURL:self.soundFileURL options:options];
-
 		
 		//Start Calculating the Duration
 		NSArray *keys = [NSArray arrayWithObject:@"duration"];
@@ -63,17 +62,13 @@
 	
 	[[AVAudioSession sharedInstance] setDelegate: self];
 	
+	[self calculateVisualization];
+	
 }
 
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
-	return YES;
-}
-
-- (void)willAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
@@ -210,6 +205,9 @@
 
 #pragma mark Utilities
 
+
+
+
 - (void)moveTrimBarsToTimeRange: (CMTimeRange)range{
 	
 	CGFloat inBarX = [self xPositionForSeconds: CMTimeGetSeconds(range.start)];
@@ -257,6 +255,26 @@
 	[playButton setNeedsDisplay];
 }
 
+- (void)calculateVisualization {
+	NSLog(@"AudioTrimmerVC: calculateVisualization");
+	AVAssetReader *reader = [AVAssetReader assetReaderWithAsset:soundFileAsset error:nil];
+	
+	NSDictionary *recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
+									[NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
+									[NSNumber numberWithInt:44100.0],AVSampleRateKey,
+									[NSNumber numberWithInt: 1],AVNumberOfChannelsKey,
+									//[NSNumber numberWithInt: AVAudioQualityMin],AVSampleRateConverterAudioQualityKey,
+									nil];
+	
+	AVAssetReaderAudioMixOutput *output = [AVAssetReaderAudioMixOutput assetReaderAudioMixOutputWithAudioTracks:soundFileAsset.tracks audioSettings:recordSettings];
+	[reader addOutput:output];
+	[reader startReading];
+	
+	CMSampleBufferRef buffer = [output copyNextSampleBuffer];
+
+	
+}
+
 - (void)calculateTrimmedAudio{
 	
 	NSLog(@"AudioTrimmerVC: calculateTrimmedAudio");
@@ -270,7 +288,7 @@
 		
 		
 		NSString *soundFilePath = [NSTemporaryDirectory ()
-								   stringByAppendingPathComponent: @"exported.m4a"];
+								   stringByAppendingPathComponent: @"audio.m4a"];
 		
 		
 		NSURL *trimmedURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];

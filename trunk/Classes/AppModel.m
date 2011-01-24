@@ -29,7 +29,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 
 
 - (void)uploadFile:(NSData *)fileData{
-	NSString *fileName = @"audio.caf";
+	NSString *fileName = @"audio.m4a";
 	
 	
 	// setting up the request object now

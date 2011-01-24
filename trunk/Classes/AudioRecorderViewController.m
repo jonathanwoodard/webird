@@ -110,8 +110,8 @@
 			[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryRecord error: nil];	
 			
 			NSDictionary *recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
-											[NSNumber numberWithInt:kAudioFormatAppleIMA4],AVFormatIDKey,
-											[NSNumber numberWithInt:16000.0],AVSampleRateKey,
+											[NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
+											[NSNumber numberWithInt:44100.0],AVSampleRateKey,
 											[NSNumber numberWithInt: 1],AVNumberOfChannelsKey,
 											[NSNumber numberWithInt: AVAudioQualityMin],AVSampleRateConverterAudioQualityKey,
 											nil];
