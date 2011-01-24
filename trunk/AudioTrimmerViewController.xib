@@ -45,7 +45,7 @@
 					<object class="IBUIImageView" id="776621562">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">306</int>
-						<string key="NSFrame">{{20, 14}, {280, 321}}</string>
+						<string key="NSFrame">{{10, 0}, {300, 320}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -85,7 +85,7 @@
 					</object>
 					<object class="IBUIButton" id="306132449">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">264</int>
+						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{111, 368}, {98, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -123,8 +123,8 @@
 					</object>
 					<object class="IBUIImageView" id="881798305">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">308</int>
-						<string key="NSFrame">{{20, 20}, {10, 315}}</string>
+						<int key="NSvFlags">304</int>
+						<string key="NSFrame">{{20, 0}, {10, 320}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="IBUIBackgroundColor" ref="897846598"/>
 						<int key="IBUIContentMode">3</int>
@@ -136,8 +136,8 @@
 					</object>
 					<object class="IBUIImageView" id="562530441">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">305</int>
-						<string key="NSFrame">{{290, 15}, {10, 320}}</string>
+						<int key="NSvFlags">304</int>
+						<string key="NSFrame">{{268, 0}, {10, 320}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="IBUIBackgroundColor" ref="897846598"/>
 						<int key="IBUIContentMode">3</int>
@@ -259,10 +259,10 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="776621562"/>
 							<reference ref="949376324"/>
 							<reference ref="134280080"/>
 							<reference ref="306132449"/>
+							<reference ref="776621562"/>
 							<reference ref="881798305"/>
 							<reference ref="562530441"/>
 						</object>
@@ -336,19 +336,19 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>AudioTrimmerViewController</string>
 					<string>UIResponder</string>
-					<string>{{697, 144}, {320, 480}}</string>
+					<string>{{707, 184}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">AUGgAABBoAAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAw6aAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABByAAAw78AAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDkQAAw58AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAwzgAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAw6kAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

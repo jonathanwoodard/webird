@@ -41,7 +41,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					617,
+					1091,
 					20,
 					48,
 					43,
@@ -325,6 +325,61 @@
 			AB532CA212ECC4DA00399120 /* XCBuildMessageTextBookmark */ = AB532CA212ECC4DA00399120 /* XCBuildMessageTextBookmark */;
 			AB532CA312ECC4DA00399120 /* PBXTextBookmark */ = AB532CA312ECC4DA00399120 /* PBXTextBookmark */;
 			AB532CA412ECC4DA00399120 /* PBXTextBookmark */ = AB532CA412ECC4DA00399120 /* PBXTextBookmark */;
+			AB532CA812ECC53500399120 /* XCBuildMessageTextBookmark */ = AB532CA812ECC53500399120 /* XCBuildMessageTextBookmark */;
+			AB532CA912ECC53500399120 /* PBXTextBookmark */ = AB532CA912ECC53500399120 /* PBXTextBookmark */;
+			AB532CAA12ECC53700399120 /* PBXTextBookmark */ = AB532CAA12ECC53700399120 /* PBXTextBookmark */;
+			AB532CAF12ECC5EB00399120 /* PBXTextBookmark */ = AB532CAF12ECC5EB00399120 /* PBXTextBookmark */;
+			AB532CB012ECC5EB00399120 /* PBXTextBookmark */ = AB532CB012ECC5EB00399120 /* PBXTextBookmark */;
+			AB532CB412ED276300399120 /* PBXTextBookmark */ = AB532CB412ED276300399120 /* PBXTextBookmark */;
+			AB532CB512ED276300399120 /* PBXTextBookmark */ = AB532CB512ED276300399120 /* PBXTextBookmark */;
+			AB532CB612ED276300399120 /* PBXTextBookmark */ = AB532CB612ED276300399120 /* PBXTextBookmark */;
+			AB532CB712ED276300399120 /* PBXTextBookmark */ = AB532CB712ED276300399120 /* PBXTextBookmark */;
+			AB532CBE12ED27E500399120 /* PBXTextBookmark */ = AB532CBE12ED27E500399120 /* PBXTextBookmark */;
+			AB532CBF12ED27E500399120 /* PBXTextBookmark */ = AB532CBF12ED27E500399120 /* PBXTextBookmark */;
+			AB532CC312ED282400399120 /* PBXTextBookmark */ = AB532CC312ED282400399120 /* PBXTextBookmark */;
+			AB532CC412ED282400399120 /* PBXTextBookmark */ = AB532CC412ED282400399120 /* PBXTextBookmark */;
+			AB532CCA12ED284300399120 /* PBXTextBookmark */ = AB532CCA12ED284300399120 /* PBXTextBookmark */;
+			AB532CCB12ED284300399120 /* PBXTextBookmark */ = AB532CCB12ED284300399120 /* PBXTextBookmark */;
+			AB532CCF12ED28E900399120 /* PBXTextBookmark */ = AB532CCF12ED28E900399120 /* PBXTextBookmark */;
+			AB532CD012ED28E900399120 /* PBXTextBookmark */ = AB532CD012ED28E900399120 /* PBXTextBookmark */;
+			AB532CD412ED28FD00399120 /* PBXTextBookmark */ = AB532CD412ED28FD00399120 /* PBXTextBookmark */;
+			AB532CD512ED28FD00399120 /* PBXTextBookmark */ = AB532CD512ED28FD00399120 /* PBXTextBookmark */;
+			AB532CD612ED294A00399120 /* PBXTextBookmark */ = AB532CD612ED294A00399120 /* PBXTextBookmark */;
+			AB532CD712ED294A00399120 /* PBXTextBookmark */ = AB532CD712ED294A00399120 /* PBXTextBookmark */;
+			AB532CD812ED294B00399120 /* PBXTextBookmark */ = AB532CD812ED294B00399120 /* PBXTextBookmark */;
+			AB532CD912ED294B00399120 /* PBXTextBookmark */ = AB532CD912ED294B00399120 /* PBXTextBookmark */;
+			AB532CDC12ED29C800399120 /* PBXTextBookmark */ = AB532CDC12ED29C800399120 /* PBXTextBookmark */;
+			AB532CDD12ED29C800399120 /* PBXTextBookmark */ = AB532CDD12ED29C800399120 /* PBXTextBookmark */;
+			AB532CE312ED2A3100399120 /* PBXTextBookmark */ = AB532CE312ED2A3100399120 /* PBXTextBookmark */;
+			AB532CE412ED2A3100399120 /* PBXTextBookmark */ = AB532CE412ED2A3100399120 /* PBXTextBookmark */;
+			AB532CEA12ED2AC900399120 /* PBXTextBookmark */ = AB532CEA12ED2AC900399120 /* PBXTextBookmark */;
+			AB532CEB12ED2AC900399120 /* PBXTextBookmark */ = AB532CEB12ED2AC900399120 /* PBXTextBookmark */;
+			AB532CEC12ED2AC900399120 /* PBXTextBookmark */ = AB532CEC12ED2AC900399120 /* PBXTextBookmark */;
+			AB532CF212ED2C0C00399120 /* PBXTextBookmark */ = AB532CF212ED2C0C00399120 /* PBXTextBookmark */;
+			AB532CF312ED2C0C00399120 /* PBXTextBookmark */ = AB532CF312ED2C0C00399120 /* PBXTextBookmark */;
+			AB532CF712ED2D3300399120 /* PBXTextBookmark */ = AB532CF712ED2D3300399120 /* PBXTextBookmark */;
+			AB532CF812ED2D3300399120 /* PBXTextBookmark */ = AB532CF812ED2D3300399120 /* PBXTextBookmark */;
+			AB532CFC12ED2E6800399120 /* PBXTextBookmark */ = AB532CFC12ED2E6800399120 /* PBXTextBookmark */;
+			AB532CFD12ED2E6800399120 /* PBXTextBookmark */ = AB532CFD12ED2E6800399120 /* PBXTextBookmark */;
+			AB532D1312EDFADA00399120 /* PBXTextBookmark */ = AB532D1312EDFADA00399120 /* PBXTextBookmark */;
+			AB532D1412EDFADA00399120 /* PBXTextBookmark */ = AB532D1412EDFADA00399120 /* PBXTextBookmark */;
+			AB532D1512EDFADA00399120 /* PBXTextBookmark */ = AB532D1512EDFADA00399120 /* PBXTextBookmark */;
+			AB532D1612EDFADA00399120 /* PBXTextBookmark */ = AB532D1612EDFADA00399120 /* PBXTextBookmark */;
+			AB532D1712EDFADA00399120 /* PBXTextBookmark */ = AB532D1712EDFADA00399120 /* PBXTextBookmark */;
+			AB532D1812EDFADA00399120 /* PBXTextBookmark */ = AB532D1812EDFADA00399120 /* PBXTextBookmark */;
+			AB532D1C12EDFB4C00399120 /* PBXTextBookmark */ = AB532D1C12EDFB4C00399120 /* PBXTextBookmark */;
+			AB532D1D12EDFB4C00399120 /* PBXTextBookmark */ = AB532D1D12EDFB4C00399120 /* PBXTextBookmark */;
+			AB532D1E12EDFB4C00399120 /* PBXTextBookmark */ = AB532D1E12EDFB4C00399120 /* PBXTextBookmark */;
+			AB532D2112EDFB7A00399120 /* PBXTextBookmark */ = AB532D2112EDFB7A00399120 /* PBXTextBookmark */;
+			AB532D2212EDFB7A00399120 /* PBXTextBookmark */ = AB532D2212EDFB7A00399120 /* PBXTextBookmark */;
+			AB532D2A12EDFD0D00399120 /* PBXTextBookmark */ = AB532D2A12EDFD0D00399120 /* PBXTextBookmark */;
+			AB532D2B12EDFD0D00399120 /* PBXTextBookmark */ = AB532D2B12EDFD0D00399120 /* PBXTextBookmark */;
+			AB532D2F12EDFD7400399120 /* PBXTextBookmark */ = AB532D2F12EDFD7400399120 /* PBXTextBookmark */;
+			AB532D3012EDFD7400399120 /* PBXTextBookmark */ = AB532D3012EDFD7400399120 /* PBXTextBookmark */;
+			AB532D3612EDFF4900399120 /* PBXTextBookmark */ = AB532D3612EDFF4900399120 /* PBXTextBookmark */;
+			AB532D3712EDFF4900399120 /* PBXTextBookmark */ = AB532D3712EDFF4900399120 /* PBXTextBookmark */;
+			AB532D3F12EE003400399120 /* PBXTextBookmark */ = AB532D3F12EE003400399120 /* PBXTextBookmark */;
+			AB532D4012EE003400399120 /* PBXTextBookmark */ = AB532D4012EE003400399120 /* PBXTextBookmark */;
 			AB5ED71B12075CCC00FEFA76 = AB5ED71B12075CCC00FEFA76 /* PBXTextBookmark */;
 			AB5ED72812075D9600FEFA76 = AB5ED72812075D9600FEFA76 /* PBXTextBookmark */;
 			AB5ED7431207612500FEFA76 = AB5ED7431207612500FEFA76 /* PBXTextBookmark */;
@@ -469,7 +524,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 12";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 489;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -479,7 +534,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -499,7 +554,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -519,7 +574,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -539,7 +594,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -559,7 +614,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -569,7 +624,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 19";
 		rLen = 0;
-		rLoc = 1763;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 50;
@@ -629,7 +684,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 154;
 		vrLoc = 3;
@@ -679,7 +734,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 19";
 		rLen = 0;
-		rLoc = 1763;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1191;
 		vrLoc = 0;
@@ -699,7 +754,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 95;
 		vrLoc = 92;
@@ -709,7 +764,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 2375;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 1136;
 		vrLoc = 3;
@@ -749,7 +804,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 11";
 		rLen = 0;
-		rLoc = 429;
+		rLoc = 451;
 		rType = 0;
 		vrLen = 114;
 		vrLoc = 161;
@@ -769,7 +824,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 2375;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 86;
 		vrLoc = 1052;
@@ -779,7 +834,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 70";
 		rLen = 0;
-		rLoc = 7286;
+		rLoc = 5788;
 		rType = 0;
 		vrLen = 563;
 		vrLoc = 1482;
@@ -809,7 +864,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 70";
 		rLen = 0;
-		rLoc = 7286;
+		rLoc = 5788;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 1483;
@@ -829,7 +884,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 75";
 		rLen = 0;
-		rLoc = 7286;
+		rLoc = 5788;
 		rType = 0;
 		vrLen = 799;
 		vrLoc = 1483;
@@ -839,7 +894,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 17";
 		rLen = 0;
-		rLoc = 637;
+		rLoc = 683;
 		rType = 0;
 		vrLen = 452;
 		vrLoc = 47;
@@ -849,7 +904,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 88";
 		rLen = 0;
-		rLoc = 7678;
+		rLoc = 6180;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 1864;
@@ -879,7 +934,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 18";
 		rLen = 0;
-		rLoc = 889;
+		rLoc = 935;
 		rType = 0;
 		vrLen = 462;
 		vrLoc = 92;
@@ -899,7 +954,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 88";
 		rLen = 0;
-		rLoc = 7678;
+		rLoc = 6180;
 		rType = 0;
 		vrLen = 198;
 		vrLoc = 3;
@@ -909,7 +964,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 24";
 		rLen = 0;
-		rLoc = 889;
+		rLoc = 935;
 		rType = 0;
 		vrLen = 665;
 		vrLoc = 3;
@@ -949,7 +1004,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 21";
 		rLen = 0;
-		rLoc = 629;
+		rLoc = 675;
 		rType = 0;
 		vrLen = 342;
 		vrLoc = 260;
@@ -1009,7 +1064,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 24";
 		rLen = 0;
-		rLoc = 1786;
+		rLoc = 1929;
 		rType = 0;
 		vrLen = 431;
 		vrLoc = 3;
@@ -1039,7 +1094,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 21";
 		rLen = 0;
-		rLoc = 629;
+		rLoc = 675;
 		rType = 0;
 		vrLen = 586;
 		vrLoc = 160;
@@ -1049,7 +1104,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 33";
 		rLen = 0;
-		rLoc = 1155;
+		rLoc = 1201;
 		rType = 0;
 		vrLen = 601;
 		vrLoc = 185;
@@ -1059,7 +1114,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 24";
 		rLen = 0;
-		rLoc = 1786;
+		rLoc = 1929;
 		rType = 0;
 		vrLen = 596;
 		vrLoc = 47;
@@ -1125,7 +1180,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 0;
-		rLoc = 702;
+		rLoc = 748;
 		rType = 0;
 		vrLen = 538;
 		vrLoc = 336;
@@ -1175,7 +1230,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 39";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 260;
@@ -1185,7 +1240,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 119";
 		rLen = 0;
-		rLoc = 4286;
+		rLoc = 4496;
 		rType = 0;
 		vrLen = 1051;
 		vrLoc = 3176;
@@ -1223,7 +1278,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 140";
 		rLen = 0;
-		rLoc = 4532;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 1157;
 		vrLoc = 3010;
@@ -1243,7 +1298,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 71";
 		rLen = 41;
-		rLoc = 2767;
+		rLoc = 3086;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 1727;
@@ -1253,7 +1308,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 71";
 		rLen = 41;
-		rLoc = 2767;
+		rLoc = 3086;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 1727;
@@ -1273,7 +1328,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 39";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 317;
 		vrLoc = 687;
@@ -1283,7 +1338,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 39";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 339;
 		vrLoc = 847;
@@ -1438,7 +1493,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 38;
+		rLoc = 39;
 		rType = 1;
 	};
 	AB532B3A12EBD43D00399120 /* PBXTextBookmark */ = {
@@ -1446,7 +1501,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 57;
-		rLoc = 1419;
+		rLoc = 1421;
 		rType = 0;
 		vrLen = 1332;
 		vrLoc = 542;
@@ -1466,7 +1521,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 41";
 		rLen = 0;
-		rLoc = 892;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 560;
 		vrLoc = 737;
@@ -1476,7 +1531,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 0;
-		rLoc = 808;
+		rLoc = 854;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 614;
@@ -1486,7 +1541,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 6;
-		rLoc = 802;
+		rLoc = 848;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 36;
@@ -1496,7 +1551,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1388;
 		vrLoc = 378;
@@ -1506,7 +1561,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 378;
@@ -1516,7 +1571,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 0;
-		rLoc = 808;
+		rLoc = 854;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 614;
@@ -1526,7 +1581,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 37";
 		rLen = 0;
-		rLoc = 1385;
+		rLoc = 1387;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 660;
@@ -1536,7 +1591,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 37";
 		rLen = 0;
-		rLoc = 1385;
+		rLoc = 1387;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 660;
@@ -1546,7 +1601,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 542;
@@ -1556,7 +1611,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 0;
-		rLoc = 808;
+		rLoc = 854;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 614;
@@ -1566,7 +1621,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 35";
 		rLen = 0;
-		rLoc = 1251;
+		rLoc = 1253;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 660;
@@ -1576,7 +1631,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 182";
 		rLen = 0;
-		rLoc = 5295;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 5111;
@@ -1586,7 +1641,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 36";
 		rLen = 0;
-		rLoc = 829;
+		rLoc = 875;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 614;
@@ -1596,7 +1651,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 0;
-		rLoc = 808;
+		rLoc = 854;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 614;
@@ -1606,7 +1661,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 40";
 		rLen = 16;
-		rLoc = 1519;
+		rLoc = 1521;
 		rType = 0;
 		vrLen = 1131;
 		vrLoc = 676;
@@ -1616,7 +1671,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 0;
-		rLoc = 808;
+		rLoc = 854;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 614;
@@ -1626,7 +1681,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1473;
+		rLoc = 1475;
 		rType = 0;
 		vrLen = 1042;
 		vrLoc = 750;
@@ -1636,7 +1691,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1228;
 		vrLoc = 542;
@@ -1646,7 +1701,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 0;
-		rLoc = 808;
+		rLoc = 854;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 614;
@@ -1655,7 +1710,7 @@
 		isa = PBXTextBookmark;
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		rLen = 0;
-		rLoc = 36;
+		rLoc = 37;
 		rType = 1;
 	};
 	AB532B7E12EBD94300399120 /* PBXTextBookmark */ = {
@@ -1663,7 +1718,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 37";
 		rLen = 0;
-		rLoc = 1357;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 648;
 		vrLoc = 1139;
@@ -1673,7 +1728,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 40";
 		rLen = 0;
-		rLoc = 1508;
+		rLoc = 1510;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 780;
@@ -1683,7 +1738,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1245;
 		vrLoc = 542;
@@ -1693,7 +1748,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 37";
 		rLen = 0;
-		rLoc = 1357;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 648;
 		vrLoc = 1139;
@@ -1703,7 +1758,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 40";
 		rLen = 0;
-		rLoc = 1508;
+		rLoc = 1510;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 780;
@@ -1713,7 +1768,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 580;
@@ -1723,7 +1778,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1433;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 777;
@@ -1733,7 +1788,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 43";
 		rLen = 0;
-		rLoc = 1607;
+		rLoc = 1750;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 780;
@@ -1743,7 +1798,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 35";
 		rLen = 6;
-		rLoc = 802;
+		rLoc = 848;
 		rType = 0;
 		vrLen = 666;
 		vrLoc = 157;
@@ -1753,7 +1808,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 765;
 		vrLoc = 351;
@@ -1763,7 +1818,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 249";
 		rLen = 0;
-		rLoc = 7316;
+		rLoc = 5818;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 6763;
@@ -1773,7 +1828,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 177;
 		vrLoc = 684;
@@ -1783,7 +1838,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 271";
 		rLen = 0;
-		rLoc = 9026;
+		rLoc = 10746;
 		rType = 0;
 		vrLen = 1378;
 		vrLoc = 6763;
@@ -1793,7 +1848,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 168;
 		vrLoc = 724;
@@ -1803,7 +1858,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 271";
 		rLen = 0;
-		rLoc = 9026;
+		rLoc = 10746;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 750;
@@ -1813,7 +1868,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 168;
 		vrLoc = 724;
@@ -1823,7 +1878,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 266";
 		rLen = 0;
-		rLoc = 8855;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 6763;
@@ -1833,7 +1888,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 193;
 		vrLoc = 750;
@@ -1843,7 +1898,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 266";
 		rLen = 0;
-		rLoc = 8855;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 6763;
@@ -1853,7 +1908,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 193;
 		vrLoc = 750;
@@ -1863,7 +1918,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 266";
 		rLen = 0;
-		rLoc = 8855;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 6763;
@@ -1873,7 +1928,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 266";
 		rLen = 0;
-		rLoc = 8855;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 1378;
 		vrLoc = 6763;
@@ -1883,7 +1938,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 193;
 		vrLoc = 750;
@@ -1893,7 +1948,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 262";
 		rLen = 0;
-		rLoc = 8644;
+		rLoc = 10364;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 6763;
@@ -1903,7 +1958,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 228;
 		vrLoc = 772;
@@ -1913,7 +1968,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 262";
 		rLen = 0;
-		rLoc = 8644;
+		rLoc = 10364;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 6763;
@@ -1923,7 +1978,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 228;
 		vrLoc = 772;
@@ -1933,7 +1988,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 262";
 		rLen = 0;
-		rLoc = 8644;
+		rLoc = 10364;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 6763;
@@ -1943,7 +1998,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 262";
 		rLen = 0;
-		rLoc = 8644;
+		rLoc = 10364;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 6694;
@@ -1953,7 +2008,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 228;
 		vrLoc = 772;
@@ -1963,7 +2018,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 261";
 		rLen = 0;
-		rLoc = 8576;
+		rLoc = 10296;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 6764;
@@ -1973,7 +2028,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 286;
 		vrLoc = 828;
@@ -1983,7 +2038,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 267";
 		rLen = 0;
-		rLoc = 8910;
+		rLoc = 10630;
 		rType = 0;
 		vrLen = 1382;
 		vrLoc = 6763;
@@ -1993,7 +2048,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 286;
 		vrLoc = 830;
@@ -2003,7 +2058,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 267";
 		rLen = 0;
-		rLoc = 8910;
+		rLoc = 10630;
 		rType = 0;
 		vrLen = 1382;
 		vrLoc = 6763;
@@ -2013,7 +2068,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 286;
 		vrLoc = 830;
@@ -2023,7 +2078,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 245";
 		rLen = 0;
-		rLoc = 6948;
+		rLoc = 5450;
 		rType = 0;
 		vrLen = 1416;
 		vrLoc = 6630;
@@ -2033,7 +2088,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 861;
@@ -2043,7 +2098,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 269";
 		rLen = 0;
-		rLoc = 8806;
+		rLoc = 10526;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 6835;
@@ -2053,7 +2108,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 303;
 		vrLoc = 892;
@@ -2063,7 +2118,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 269";
 		rLen = 0;
-		rLoc = 8806;
+		rLoc = 10526;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 6835;
@@ -2073,7 +2128,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 269";
 		rLen = 0;
-		rLoc = 8806;
+		rLoc = 10526;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 6835;
@@ -2083,7 +2138,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 303;
 		vrLoc = 892;
@@ -2093,7 +2148,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 269";
 		rLen = 0;
-		rLoc = 8806;
+		rLoc = 10526;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 6835;
@@ -2103,7 +2158,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 255";
 		rLen = 0;
-		rLoc = 7699;
+		rLoc = 6201;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 6766;
@@ -2113,7 +2168,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 893;
@@ -2123,7 +2178,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 255";
 		rLen = 0;
-		rLoc = 7699;
+		rLoc = 6201;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 6766;
@@ -2133,7 +2188,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 893;
@@ -2143,7 +2198,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 250";
 		rLen = 0;
-		rLoc = 7316;
+		rLoc = 5818;
 		rType = 0;
 		vrLen = 1440;
 		vrLoc = 6766;
@@ -2153,7 +2208,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 893;
@@ -2163,7 +2218,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 264";
 		rLen = 0;
-		rLoc = 8577;
+		rLoc = 10297;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 6766;
@@ -2173,7 +2228,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 893;
@@ -2183,7 +2238,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 264";
 		rLen = 0;
-		rLoc = 8577;
+		rLoc = 10297;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 6766;
@@ -2193,7 +2248,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 264";
 		rLen = 0;
-		rLoc = 8577;
+		rLoc = 10297;
 		rType = 0;
 		vrLen = 1436;
 		vrLoc = 6766;
@@ -2203,7 +2258,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 1000;
@@ -2213,7 +2268,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 264";
 		rLen = 0;
-		rLoc = 8577;
+		rLoc = 10297;
 		rType = 0;
 		vrLen = 1436;
 		vrLoc = 6766;
@@ -2223,7 +2278,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 264";
 		rLen = 0;
-		rLoc = 8577;
+		rLoc = 10297;
 		rType = 0;
 		vrLen = 1436;
 		vrLoc = 6766;
@@ -2233,7 +2288,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 1000;
@@ -2243,7 +2298,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 255";
 		rLen = 0;
-		rLoc = 7699;
+		rLoc = 6201;
 		rType = 0;
 		vrLen = 1490;
 		vrLoc = 6694;
@@ -2253,7 +2308,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 224;
 		vrLoc = 1114;
@@ -2263,7 +2318,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 264";
 		rLen = 0;
-		rLoc = 8583;
+		rLoc = 10303;
 		rType = 0;
 		vrLen = 1258;
 		vrLoc = 6951;
@@ -2273,7 +2328,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 224;
 		vrLoc = 1114;
@@ -2283,7 +2338,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 250";
 		rLen = 0;
-		rLoc = 7316;
+		rLoc = 5818;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 6835;
@@ -2293,7 +2348,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2303,7 +2358,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 255";
 		rLen = 0;
-		rLoc = 7699;
+		rLoc = 6201;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 6507;
@@ -2313,7 +2368,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2323,7 +2378,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 255";
 		rLen = 0;
-		rLoc = 7699;
+		rLoc = 6201;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 6507;
@@ -2333,7 +2388,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2343,7 +2398,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1444;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1249;
 		vrLoc = 542;
@@ -2353,7 +2408,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 243";
 		rLen = 0;
-		rLoc = 6861;
+		rLoc = 5363;
 		rType = 0;
 		vrLen = 1344;
 		vrLoc = 6694;
@@ -2363,7 +2418,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2373,7 +2428,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 249";
 		rLen = 0;
-		rLoc = 7091;
+		rLoc = 5593;
 		rType = 0;
 		vrLen = 1488;
 		vrLoc = 6764;
@@ -2383,7 +2438,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2393,7 +2448,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 249";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 5652;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 6764;
@@ -2403,7 +2458,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2413,7 +2468,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 249";
 		rLen = 0;
-		rLoc = 7122;
+		rLoc = 5624;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 6764;
@@ -2423,7 +2478,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2433,7 +2488,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 249";
 		rLen = 0;
-		rLoc = 7122;
+		rLoc = 5624;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 6764;
@@ -2443,7 +2498,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 249";
 		rLen = 0;
-		rLoc = 7122;
+		rLoc = 5624;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 6764;
@@ -2453,7 +2508,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2463,7 +2518,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 248";
 		rLen = 0;
-		rLoc = 7059;
+		rLoc = 5561;
 		rType = 0;
 		vrLen = 1417;
 		vrLoc = 6293;
@@ -2473,7 +2528,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2483,7 +2538,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 255";
 		rLen = 0;
-		rLoc = 7532;
+		rLoc = 6034;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 6293;
@@ -2493,7 +2548,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 29";
 		rLen = 15;
-		rLoc = 667;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1115;
@@ -2503,7 +2558,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 277";
 		rLen = 47;
-		rLoc = 8537;
+		rLoc = 10257;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 7375;
@@ -2513,7 +2568,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 52";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1242;
 		rType = 0;
 		vrLen = 524;
 		vrLoc = 861;
@@ -2523,7 +2578,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 266";
 		rLen = 0;
-		rLoc = 7860;
+		rLoc = 6363;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 7375;
@@ -2533,7 +2588,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 52";
 		rLen = 0;
-		rLoc = 1196;
+		rLoc = 1242;
 		rType = 0;
 		vrLen = 495;
 		vrLoc = 890;
@@ -2543,7 +2598,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 269";
 		rLen = 0;
-		rLoc = 7989;
+		rLoc = 6492;
 		rType = 0;
 		vrLen = 1267;
 		vrLoc = 7408;
@@ -2553,7 +2608,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 57";
 		rLen = 0;
-		rLoc = 1364;
+		rLoc = 1550;
 		rType = 0;
 		vrLen = 523;
 		vrLoc = 890;
@@ -2563,7 +2618,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 43";
 		rLen = 0;
-		rLoc = 1607;
+		rLoc = 1750;
 		rType = 0;
 		vrLen = 351;
 		vrLoc = 1557;
@@ -2573,7 +2628,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 43";
 		rLen = 0;
-		rLoc = 1607;
+		rLoc = 1750;
 		rType = 0;
 		vrLen = 684;
 		vrLoc = 4859;
@@ -2583,7 +2638,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 275";
 		rLen = 0;
-		rLoc = 8261;
+		rLoc = 9981;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 7948;
@@ -2593,7 +2648,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 182";
 		rLen = 0;
-		rLoc = 5295;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 684;
 		vrLoc = 4859;
@@ -2603,7 +2658,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 57";
 		rLen = 0;
-		rLoc = 1364;
+		rLoc = 1550;
 		rType = 0;
 		vrLen = 551;
 		vrLoc = 861;
@@ -2613,7 +2668,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 52";
 		rLen = 0;
-		rLoc = 1239;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 525;
 		vrLoc = 893;
@@ -2623,7 +2678,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 276";
 		rLen = 0;
-		rLoc = 8316;
+		rLoc = 10036;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 7948;
@@ -2633,7 +2688,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 51";
 		rLen = 0;
-		rLoc = 1193;
+		rLoc = 1239;
 		rType = 0;
 		vrLen = 525;
 		vrLoc = 893;
@@ -2643,7 +2698,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 260";
 		rLen = 0;
-		rLoc = 7741;
+		rLoc = 6243;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 7044;
@@ -2653,7 +2708,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 51";
 		rLen = 0;
-		rLoc = 1193;
+		rLoc = 1239;
 		rType = 0;
 		vrLen = 525;
 		vrLoc = 893;
@@ -2664,7 +2719,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 114;
+		rLoc = 122;
 		rType = 1;
 	};
 	AB532C7D12ECC27200399120 /* PBXTextBookmark */ = {
@@ -2672,7 +2727,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 115";
 		rLen = 42;
-		rLoc = 3415;
+		rLoc = 3722;
 		rType = 0;
 		vrLen = 1097;
 		vrLoc = 2889;
@@ -2683,7 +2738,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 114;
+		rLoc = 122;
 		rType = 1;
 	};
 	AB532C8112ECC28500399120 /* PBXTextBookmark */ = {
@@ -2691,7 +2746,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 112";
 		rLen = 0;
-		rLoc = 3348;
+		rLoc = 3655;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 3020;
@@ -2701,7 +2756,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 51";
 		rLen = 0;
-		rLoc = 1193;
+		rLoc = 1239;
 		rType = 0;
 		vrLen = 525;
 		vrLoc = 893;
@@ -2711,7 +2766,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 115";
 		rLen = 42;
-		rLoc = 3415;
+		rLoc = 3722;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 2889;
@@ -2731,7 +2786,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmerViewController.h: 54";
 		rLen = 0;
-		rLoc = 1273;
+		rLoc = 1459;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 582;
@@ -2741,7 +2796,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 182";
 		rLen = 0;
-		rLoc = 5295;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 1273;
 		vrLoc = 4640;
@@ -2751,7 +2806,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 202";
 		rLen = 0;
-		rLoc = 5892;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 5294;
@@ -2771,7 +2826,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 202";
 		rLen = 0;
-		rLoc = 5892;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 2378;
@@ -2791,7 +2846,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 200";
 		rLen = 0;
-		rLoc = 5880;
+		rLoc = 4703;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 4928;
@@ -2801,7 +2856,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 115";
 		rLen = 42;
-		rLoc = 3415;
+		rLoc = 3722;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 2929;
@@ -2812,7 +2867,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 268;
+		rLoc = 306;
 		rType = 1;
 	};
 	AB532CA312ECC4DA00399120 /* PBXTextBookmark */ = {
@@ -2820,7 +2875,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 269";
 		rLen = 2;
-		rLoc = 8060;
+		rLoc = 6563;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 8025;
@@ -2830,10 +2885,559 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmerViewController.m: 267";
 		rLen = 0;
-		rLoc = 8057;
+		rLoc = 6560;
 		rType = 0;
 		vrLen = 1457;
 		vrLoc = 7079;
+	};
+	AB532CA812ECC53500399120 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected ';' before '}' token";
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 306;
+		rType = 1;
+	};
+	AB532CA912ECC53500399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 267";
+		rLen = 0;
+		rLoc = 6560;
+		rType = 0;
+		vrLen = 1265;
+		vrLoc = 7533;
+	};
+	AB532CAA12ECC53700399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 267";
+		rLen = 0;
+		rLoc = 6560;
+		rType = 0;
+		vrLen = 1265;
+		vrLoc = 7533;
+	};
+	AB532CAF12ECC5EB00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 269";
+		rLen = 2;
+		rLoc = 6563;
+		rType = 0;
+		vrLen = 474;
+		vrLoc = 8069;
+	};
+	AB532CB012ECC5EB00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 126";
+		rLen = 0;
+		rLoc = 4048;
+		rType = 0;
+		vrLen = 1048;
+		vrLoc = 3182;
+	};
+	AB532CB412ED276300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 270";
+		rLen = 0;
+		rLoc = 9781;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 8069;
+	};
+	AB532CB512ED276300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 36";
+		rLen = 0;
+		rLoc = 854;
+		rType = 0;
+		vrLen = 811;
+		vrLoc = 430;
+	};
+	AB532CB612ED276300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 260;
+	};
+	AB532CB712ED276300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 217";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 1387;
+		vrLoc = 7041;
+	};
+	AB532CBE12ED27E500399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 360;
+		vrLoc = 276;
+	};
+	AB532CBF12ED27E500399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 208";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 5893;
+	};
+	AB532CC312ED282400399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 394;
+		vrLoc = 312;
+	};
+	AB532CC412ED282400399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 209";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 5934;
+	};
+	AB532CCA12ED284300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 394;
+		vrLoc = 312;
+	};
+	AB532CCB12ED284300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 209";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 5934;
+	};
+	AB532CCF12ED28E900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 336;
+	};
+	AB532CD012ED28E900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 64";
+		rLen = 0;
+		rLoc = 2132;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 1935;
+	};
+	AB532CD412ED28FD00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 336;
+	};
+	AB532CD512ED28FD00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 64";
+		rLen = 0;
+		rLoc = 2132;
+		rType = 0;
+		vrLen = 969;
+		vrLoc = 3882;
+	};
+	AB532CD612ED294A00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 193";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 1240;
+		vrLoc = 4251;
+	};
+	AB532CD712ED294A00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 192";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 1243;
+		vrLoc = 4303;
+	};
+	AB532CD812ED294B00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 336;
+	};
+	AB532CD912ED294B00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 64";
+		rLen = 0;
+		rLoc = 2132;
+		rType = 0;
+		vrLen = 969;
+		vrLoc = 3882;
+	};
+	AB532CDC12ED29C800399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 419;
+		vrLoc = 351;
+	};
+	AB532CDD12ED29C800399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 42";
+		rLen = 0;
+		rLoc = 1699;
+		rType = 0;
+		vrLen = 1156;
+		vrLoc = 813;
+	};
+	AB532CE312ED2A3100399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 404;
+	};
+	AB532CE412ED2A3100399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 226";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 794;
+		vrLoc = 5908;
+	};
+	AB532CEA12ED2AC900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 399;
+		vrLoc = 451;
+	};
+	AB532CEB12ED2AC900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 207";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 980;
+		vrLoc = 5327;
+	};
+	AB532CEC12ED2AC900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 207";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 965;
+		vrLoc = 6278;
+	};
+	AB532CF212ED2C0C00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 340;
+		vrLoc = 511;
+	};
+	AB532CF312ED2C0C00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 227";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 744;
+		vrLoc = 5949;
+	};
+	AB532CF712ED2D3300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 341;
+		vrLoc = 540;
+	};
+	AB532CF812ED2D3300399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 220";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 866;
+		vrLoc = 5954;
+	};
+	AB532CFC12ED2E6800399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 20";
+		rLen = 22;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 308;
+		vrLoc = 604;
+	};
+	AB532CFD12ED2E6800399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 211";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 5992;
+	};
+	AB532D1312EDFADA00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 32";
+		rLen = 0;
+		rLoc = 769;
+		rType = 0;
+		vrLen = 313;
+		vrLoc = 570;
+	};
+	AB532D1412EDFADA00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 288";
+		rLen = 0;
+		rLoc = 6527;
+		rType = 0;
+		vrLen = 583;
+		vrLoc = 8129;
+	};
+	AB532D1512EDFADA00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 333";
+		rLen = 0;
+		rLoc = 11155;
+		rType = 0;
+		vrLen = 1878;
+		vrLoc = 9175;
+	};
+	AB532D1612EDFADA00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 156";
+		rLen = 0;
+		rLoc = 4703;
+		rType = 0;
+		vrLen = 888;
+		vrLoc = 4252;
+	};
+	AB532D1712EDFADA00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 55";
+		rLen = 0;
+		rLoc = 1459;
+		rType = 0;
+		vrLen = 596;
+		vrLoc = 540;
+	};
+	AB532D1812EDFADA00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 54";
+		rLen = 0;
+		rLoc = 1342;
+		rType = 0;
+		vrLen = 632;
+		vrLoc = 874;
+	};
+	AB532D1C12EDFB4C00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 333";
+		rLen = 0;
+		rLoc = 11155;
+		rType = 0;
+		vrLen = 1878;
+		vrLoc = 9175;
+	};
+	AB532D1D12EDFB4C00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 333";
+		rLen = 0;
+		rLoc = 11155;
+		rType = 0;
+		vrLen = 1878;
+		vrLoc = 9175;
+	};
+	AB532D1E12EDFB4C00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 54";
+		rLen = 0;
+		rLoc = 1342;
+		rType = 0;
+		vrLen = 632;
+		vrLoc = 874;
+	};
+	AB532D2112EDFB7A00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 333";
+		rLen = 0;
+		rLoc = 11173;
+		rType = 0;
+		vrLen = 1875;
+		vrLoc = 9178;
+	};
+	AB532D2212EDFB7A00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 54";
+		rLen = 0;
+		rLoc = 1342;
+		rType = 0;
+		vrLen = 674;
+		vrLoc = 876;
+	};
+	AB532D2A12EDFD0D00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 195";
+		rLen = 0;
+		rLoc = 6349;
+		rType = 0;
+		vrLen = 2006;
+		vrLoc = 5082;
+	};
+	AB532D2B12EDFD0D00399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 55";
+		rLen = 0;
+		rLoc = 1363;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 936;
+	};
+	AB532D2F12EDFD7400399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 218";
+		rLen = 0;
+		rLoc = 7256;
+		rType = 0;
+		vrLen = 1537;
+		vrLoc = 5975;
+	};
+	AB532D3012EDFD7400399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 55";
+		rLen = 0;
+		rLoc = 1363;
+		rType = 0;
+		vrLen = 666;
+		vrLoc = 938;
+	};
+	AB532D3612EDFF4900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 76";
+		rLen = 36;
+		rLoc = 2452;
+		rType = 0;
+		vrLen = 1241;
+		vrLoc = 2051;
+	};
+	AB532D3712EDFF4900399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 55";
+		rLen = 0;
+		rLoc = 1363;
+		rType = 0;
+		vrLen = 666;
+		vrLoc = 938;
+	};
+	AB532D3F12EE003400399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
+		name = "AudioTrimmerViewController.m: 220";
+		rLen = 0;
+		rLoc = 6993;
+		rType = 0;
+		vrLen = 1699;
+		vrLoc = 6035;
+	};
+	AB532D4012EE003400399120 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
+		name = "AudioTrimmerViewController.h: 55";
+		rLen = 0;
+		rLoc = 1363;
+		rType = 0;
+		vrLen = 666;
+		vrLoc = 938;
 	};
 	AB5ED70612075C0900FEFA76 /* WaitingIndicatorViewController.h */ = {
 		uiCtxt = {
@@ -3071,17 +3675,17 @@
 	};
 	ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {585, 793}}";
-			sepNavSelRange = "{1273, 0}";
-			sepNavVisRange = "{582, 836}";
+			sepNavIntBoundsRect = "{{0, 0}, {1269, 832}}";
+			sepNavSelRange = "{1363, 0}";
+			sepNavVisRange = "{938, 666}";
 			sepNavWindowFrame = "{{-1771, -103}, {1653, 874}}";
 		};
 	};
 	ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 3874}}";
-			sepNavSelRange = "{8057, 0}";
-			sepNavVisRange = "{7079, 1457}";
+			sepNavIntBoundsRect = "{{0, 0}, {1269, 4615}}";
+			sepNavSelRange = "{6993, 0}";
+			sepNavVisRange = "{6035, 1699}";
 			sepNavWindowFrame = "{{0, 4}, {1653, 874}}";
 		};
 	};
@@ -3090,7 +3694,7 @@
 		fRef = ABC27AF612E8FF16001EE5B9 /* AudioTrimmerViewController.h */;
 		name = "AudioTrimmer.h: 17";
 		rLen = 0;
-		rLoc = 1418;
+		rLoc = 1604;
 		rType = 0;
 		vrLen = 227;
 		vrLoc = 0;
@@ -3100,7 +3704,7 @@
 		fRef = ABC27AF712E8FF16001EE5B9 /* AudioTrimmerViewController.m */;
 		name = "AudioTrimmer.m: 32";
 		rLen = 307;
-		rLoc = 2072;
+		rLoc = 2137;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 0;
