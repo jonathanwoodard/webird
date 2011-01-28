@@ -14,7 +14,8 @@
 
 typedef enum {
 	kAudioTrimmerIn,
-	kAudioTrimmerOut
+	kAudioTrimmerOut,
+	kAudioTrimmerNone,
 } AudioTrimmerInOrOut;
 
 typedef enum {
@@ -29,23 +30,20 @@ typedef enum {
 	IBOutlet UIButton*	deleteButton;
 	IBOutlet UIButton*	playButton;
 	IBOutlet UIButton*	analyzeButton;
-	IBOutlet CPGraphHostingView*	spectrogramView;
-	
+	IBOutlet CPGraphHostingView*	graphView;
+	IBOutlet UIView*	playhead;
 	
 	CPXYGraph *graph;
 	NSMutableArray *audioAsArray;
-	
 	AudioTrimmerInOrOut selectedTrimmer;
 	AudioTrimmerMode mode;
-	
 	NSURL *soundFileURL;
+	NSURL *trimmedSoundFileURL;
 	AVURLAsset *soundFileAsset;
 	CMTime soundFileDuration;
-
-
-	NSURL *trimmedSoundFileURL;
-	
 	AVAudioPlayer *soundPlayer;
+	NSTimer *updateTimer;
+
 }
 
 @property(readwrite, retain) NSURL *soundFileURL;

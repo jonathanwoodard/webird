@@ -64,6 +64,8 @@
 	[[AVAudioSession sharedInstance] setDelegate: self];
 	
 	[self calculateVisualization];
+	playhead.alpha = 0.0;
+
 	
 }
 
@@ -120,7 +122,14 @@
 				mode = kAudioTrimmerModePlaying;
 				[self updateButtonsForCurrentMode];
 				[self.soundPlayer prepareToPlay];
-				[self.soundPlayer play];		
+				[self.soundPlayer play];
+				
+				updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.03 
+																		 target:self 
+																	   selector:@selector(updatePlayhead) 
+																	   userInfo:nil 
+																		repeats:YES];
+				
 			}
 			break;
 	}
@@ -145,6 +154,11 @@
 	
 	soundPlayer = nil;
 	
+	[updateTimer invalidate];
+	playhead.alpha = 0.0;
+
+
+	
 	mode = kAudioTrimmerModeReady;
 	[self updateButtonsForCurrentMode];
 	
@@ -156,55 +170,65 @@
 
 #pragma mark Core Plot Delegate
 -(NSUInteger)numberOfRecordsForPlot:(CPPlot *)plot{
-	return spectrogramView.frame.size.width;
+	return graphView.frame.size.width;
 }
 
 -(NSNumber *)numberForPlot:(CPPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
 	if (fieldEnum == CPScatterPlotFieldX ) return [NSNumber numberWithUnsignedInteger:index];
 	
-	Float32 samplesPerPixel = [audioAsArray count] / spectrogramView.frame.size.width;
+	Float32 samplesPerPixel = [audioAsArray count] / graphView.frame.size.width;
 	NSUInteger scaledIndex = floor(samplesPerPixel * index);
 	return [audioAsArray objectAtIndex:scaledIndex];
 }
 
 #pragma mark Managing Touches
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	
 	UITouch *touch = [touches anyObject]; //should be just one
 	CGPoint touchPoint = [touch locationInView:self.view];
 	
 	//Was the touch within a trim bar? If so, which one?
 	UIView *hitView = [self.view hitTest:touchPoint withEvent:event];
 	
-	if (hitView == trimInBar) selectedTrimmer = kAudioTrimmerIn;
-	else if (hitView == trimOutBar) selectedTrimmer = kAudioTrimmerOut;
+	if (hitView == trimInBar) {
+		selectedTrimmer = kAudioTrimmerIn;
+		NSLog(@"AudioTrimmerVC: Touches Began on the in bar");
+	}
+	else if (hitView == trimOutBar) {
+		selectedTrimmer = kAudioTrimmerOut;
+		NSLog(@"AudioTrimmerVC: Touches Began on the out bar");
+	}
+	else {
+		selectedTrimmer = kAudioTrimmerNone;
+		NSLog(@"AudioTrimmerVC: Touches Began, but not on a trim bar");
+	}
+
 
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event { 
 	UITouch *touch = [touches anyObject]; //should be just one
 	CGPoint touchPoint = [touch locationInView:self.view];
-	
-	NSLog(@"AudioTrimmer: Touch recieved in one of the trim bars. xPos = %f",touchPoint.x);
-
 
 	if (selectedTrimmer == kAudioTrimmerIn && 
-		touchPoint.x  + trimInBar.frame.size.width > spectrogramView.frame.origin.x && 
+		touchPoint.x  + trimInBar.frame.size.width > graphView.frame.origin.x && 
 		touchPoint.x + trimInBar.frame.size.width < trimOutBar.frame.origin.x) {
 		CGRect newFrame = CGRectMake(touchPoint.x, trimInBar.frame.origin.y, trimInBar.frame.size.width , trimInBar.frame.size.height);
 		trimInBar.frame = newFrame;
 	}
 	else if (selectedTrimmer == kAudioTrimmerOut && 
-			 touchPoint.x < spectrogramView.frame.origin.x + spectrogramView.frame.size.width  && 
+			 touchPoint.x < graphView.frame.origin.x + graphView.frame.size.width  && 
 			 touchPoint.x > trimInBar.frame.origin.x + trimInBar.frame.size.width) {
 		CGRect newFrame = CGRectMake(touchPoint.x, trimOutBar.frame.origin.y, trimOutBar.frame.size.width , trimOutBar.frame.size.height);
 		trimOutBar.frame = newFrame;
 	}
 	
-	[self secondsForXPosition:touchPoint.x];
-
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	if (selectedTrimmer == kAudioTrimmerNone) return;
+	
 	CMTimeRange range = [self trimmedTimeRange];
 
 	NSLog(@"AudioTrimmerVC: Touches ended. Trim region starts at %f and is %f in duration",
@@ -219,7 +243,17 @@
 #pragma mark Utilities
 
 
+- (void)updatePlayhead {
+	playhead.alpha = 1.0;
+	
+	//Float64 startTimeInSeconds = [self secondsForXPosition: trimInBar.frame.origin.x + trimInBar.frame.size.width];
+	NSTimeInterval currentTimeInTrimRegion = soundPlayer.currentTime;
 
+	CGFloat playheadX = [self xPositionForSeconds: currentTimeInTrimRegion] + trimInBar.frame.origin.x  - graphView.frame.origin.x;
+	
+	CGRect frame = CGRectMake(playheadX, playhead.frame.origin.y, playhead.frame.size.width, playhead.frame.size.height);
+	playhead.frame = frame;
+}
 
 - (void)moveTrimBarsToTimeRange: (CMTimeRange)range{
 	
@@ -228,10 +262,10 @@
 	
 	NSLog(@"AudioTrimmerVC: moveTrimBarsToTimeRange: inBarX:%f outBarX:%f",inBarX,outBarX);
 	
-	CGRect inFrame = CGRectMake(inBarX - trimInBar.frame.size.width, spectrogramView.frame.origin.y, trimInBar.frame.size.width , spectrogramView.frame.size.height);
+	CGRect inFrame = CGRectMake(inBarX - trimInBar.frame.size.width, graphView.frame.origin.y, trimInBar.frame.size.width , graphView.frame.size.height);
 	trimInBar.frame = inFrame;
 	
-	CGRect outFrame = CGRectMake(outBarX, spectrogramView.frame.origin.y, trimOutBar.frame.size.width , spectrogramView.frame.size.height);
+	CGRect outFrame = CGRectMake(outBarX, graphView.frame.origin.y, trimOutBar.frame.size.width , graphView.frame.size.height);
 	trimOutBar.frame = outFrame;
 	
 }
@@ -298,9 +332,9 @@
 				 
 	NSLog(@"Adding Plot Now");
 
-	graph = [[CPXYGraph alloc] initWithFrame:spectrogramView.frame];
-	spectrogramView.hostedGraph = graph;
-	spectrogramView.collapsesLayers = NO;
+	graph = [[CPXYGraph alloc] initWithFrame:graphView.frame];
+	graphView.hostedGraph = graph;
+	graphView.collapsesLayers = NO;
 	graph.paddingLeft = 0.0;
 	graph.paddingTop = 0.0;
 	graph.paddingRight = 0.0;
@@ -348,7 +382,7 @@
 	 */
 	
 	CPScatterPlot *plot = [[[CPScatterPlot alloc] 
-									initWithFrame:spectrogramView.bounds] autorelease];
+									initWithFrame:graphView.bounds] autorelease];
 	plot.identifier = @"plot";
 	plot.dataLineStyle.lineWidth = 1.0f;
 	plot.dataLineStyle.lineColor = [CPColor blueColor];
@@ -432,27 +466,16 @@
 
 
 -(Float64)secondsForXPosition: (CGFloat)xPos {
-	Float64 timePerPixel = CMTimeGetSeconds(soundFileDuration)/spectrogramView.frame.size.width;
-	NSLog(@"AudioTrimmerVC: timeForPosition: timePerPixel is %f",timePerPixel);
-	
-	//how many pixels into the spectrogram?
-	CGFloat pixelsIn = xPos - spectrogramView.frame.origin.x; 
-	NSLog(@"AudioTrimmerVC: timeForPosition: This is %f pixels into the spectrogram", pixelsIn);
-	
-	//time within sound
+	Float64 timePerPixel = CMTimeGetSeconds(soundFileDuration)/graphView.frame.size.width;
+	CGFloat pixelsIn = xPos - graphView.frame.origin.x; 
 	Float64 timeIn = timePerPixel * pixelsIn;
-	NSLog(@"AudioTrimmerVC: timeForPosition: This is %f seconds into the spectrogram", timeIn);
 	
 	return timeIn;
 }
 
  -(CGFloat)xPositionForSeconds: (Float64)seconds {
-	 Float64 timePerPixel = CMTimeGetSeconds(soundFileDuration)/spectrogramView.frame.size.width;
-	 NSLog(@"AudioTrimmerVC: xPositionForSeconds: timePerPixel is %f",timePerPixel);
-	 
-	 //how many pixels into the spectrogram + spectrogram origin?
-	 CGFloat xPos =  seconds / timePerPixel + spectrogramView.frame.origin.x; 
-	 NSLog(@"AudioTrimmerVC: PositionForSeconds: This is %f pixels into the view", xPos);
+	 Float64 timePerPixel = CMTimeGetSeconds(soundFileDuration)/graphView.frame.size.width;
+	 CGFloat xPos =  seconds / timePerPixel + graphView.frame.origin.x; 
 	 
 	 return xPos;
  }		 
