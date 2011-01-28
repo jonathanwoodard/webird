@@ -2,17 +2,17 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10H574</string>
+		<string key="IBDocument.SystemVersion">10J567</string>
 		<string key="IBDocument.InterfaceBuilderVersion">823</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">132</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="25"/>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -45,6 +45,21 @@
 					<object class="IBUIView" id="482825941">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">306</int>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIImageView" id="381499157">
+								<reference key="NSNextResponder" ref="482825941"/>
+								<int key="NSvFlags">304</int>
+								<string key="NSFrame">{{127, 0}, {2, 325}}</string>
+								<reference key="NSSuperview" ref="482825941"/>
+								<object class="NSColor" key="IBUIBackgroundColor" id="897846598">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
+								<int key="IBUIContentMode">3</int>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+						</object>
 						<string key="NSFrame">{{20, 0}, {280, 325}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -73,10 +88,7 @@
 						</object>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Delete</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="897846598">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
+						<reference key="IBUIHighlightedTitleColor" ref="897846598"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
@@ -127,7 +139,7 @@
 					<object class="IBUIImageView" id="881798305">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">304</int>
-						<string key="NSFrame">{{77, 0}, {20, 320}}</string>
+						<string key="NSFrame">{{77, 0}, {20, 325}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="IBUIBackgroundColor" ref="897846598"/>
 						<int key="IBUIContentMode">3</int>
@@ -136,7 +148,7 @@
 					<object class="IBUIImageView" id="562530441">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">304</int>
-						<string key="NSFrame">{{217, 0}, {20, 320}}</string>
+						<string key="NSFrame">{{217, 0}, {20, 325}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="IBUIBackgroundColor" ref="897846598"/>
 						<int key="IBUIContentMode">3</int>
@@ -236,11 +248,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">spectrogramView</string>
+						<string key="label">playhead</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="381499157"/>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">graphView</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="482825941"/>
 					</object>
-					<int key="connectionID">28</int>
+					<int key="connectionID">31</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -305,7 +325,16 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
 						<reference key="object" ref="482825941"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="381499157"/>
+						</object>
 						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">29</int>
+						<reference key="object" ref="381499157"/>
+						<reference key="parent" ref="482825941"/>
 					</object>
 				</object>
 			</object>
@@ -324,6 +353,8 @@
 					<string>25.CustomClassName</string>
 					<string>25.IBPluginDependency</string>
 					<string>25.IBViewBoundsToFrameTransform</string>
+					<string>29.IBPluginDependency</string>
+					<string>29.IBViewBoundsToFrameTransform</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBViewBoundsToFrameTransform</string>
 					<string>7.IBPluginDependency</string>
@@ -343,11 +374,15 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDhgAAw58AAA</bytes>
+						<bytes key="NSTransformStruct">AUNZAAAAAAAAA</bytes>
 					</object>
 					<string>CPGraphHostingView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform"/>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDXgAAw6GAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAw9sAAA</bytes>
@@ -378,7 +413,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">28</int>
+			<int key="maxID">31</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -431,8 +466,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>analyzeButton</string>
 							<string>deleteButton</string>
+							<string>graphView</string>
 							<string>playButton</string>
-							<string>spectrogramView</string>
+							<string>playhead</string>
 							<string>trimInBar</string>
 							<string>trimOutBar</string>
 						</object>
@@ -440,8 +476,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIButton</string>
 							<string>UIButton</string>
-							<string>UIButton</string>
 							<string>CPGraphHostingView</string>
+							<string>UIButton</string>
+							<string>UIView</string>
 							<string>UIView</string>
 							<string>UIView</string>
 						</object>
@@ -452,8 +489,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>analyzeButton</string>
 							<string>deleteButton</string>
+							<string>graphView</string>
 							<string>playButton</string>
-							<string>spectrogramView</string>
+							<string>playhead</string>
 							<string>trimInBar</string>
 							<string>trimOutBar</string>
 						</object>
@@ -468,12 +506,16 @@
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">graphView</string>
+								<string key="candidateClassName">CPGraphHostingView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">playButton</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">spectrogramView</string>
-								<string key="candidateClassName">CPGraphHostingView</string>
+								<string key="name">playhead</string>
+								<string key="candidateClassName">UIView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">trimInBar</string>

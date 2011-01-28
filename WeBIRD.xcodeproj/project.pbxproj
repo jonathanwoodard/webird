@@ -386,9 +386,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WeBIRD_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WeBIRD-Info.plist";
 				OTHER_LDFLAGS = (
+					"-lCorePlot",
 					"-all_load",
 					"-ObjC",
 				);
