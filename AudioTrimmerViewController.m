@@ -38,8 +38,8 @@
 				case AVKeyValueStatusLoaded:
 					soundFileDuration = [self.soundFileAsset duration];
 					NSLog(@"Duration Loaded: %f Seconds", CMTimeGetSeconds(soundFileDuration));
-					[self calculateTrimmedAudio];
 					[self moveTrimBarsToTimeRange: CMTimeRangeMake(CMTimeMakeWithSeconds(0.0f, 600),soundFileDuration)];
+					[self calculateTrimmedAudio];
 					break;
 				case AVKeyValueStatusFailed:
 					NSLog(@"ERROR Loading Asset");
@@ -306,6 +306,7 @@
 
 	graph = [[CPXYGraph alloc] initWithFrame:spectrogramView.frame];
 	spectrogramView.hostedGraph = graph;
+	spectrogramView.collapsesLayers = NO;
 	graph.paddingLeft = 0.0;
 	graph.paddingTop = 0.0;
 	graph.paddingRight = 0.0;
@@ -358,6 +359,7 @@
 	plot.dataLineStyle.lineWidth = 1.0f;
 	plot.dataLineStyle.lineColor = [CPColor blueColor];
 	plot.dataSource = self;
+	plot.cachePrecision = CPPlotCachePrecisionDouble;
 	[graph addPlot:plot];	
 	
 	
