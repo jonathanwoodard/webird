@@ -50,6 +50,7 @@
 			}
 		}];
 		 
+		audioAsArray = [[NSMutableArray alloc]initWithCapacity:10];
     }
     return self;
 }
@@ -153,6 +154,24 @@
 	NSLog(@"AudioRecorder: Playback Error");
 }
 
+#pragma mark Core Plot Delegate
+-(NSUInteger)numberOfRecordsForPlot:(CPPlot *)plot{
+	NSLog(@"AudioTrimmerVC: There are %d records in audioAsArray",[audioAsArray count]);
+	return [audioAsArray count];
+}
+
+-(NSNumber *)numberForPlot:(CPPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
+	switch ( fieldEnum ) {
+		case CPScatterPlotFieldX:
+			return [NSNumber numberWithUnsignedInteger:index];
+			break;
+		case CPScatterPlotFieldY:
+			//NSLog(@"index = %d value = %@", index, [audioAsArray objectAtIndex:index]);
+			return [audioAsArray objectAtIndex:index];
+			break;
+    }
+
+}
 
 #pragma mark Managing Touches
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -259,20 +278,100 @@
 	NSLog(@"AudioTrimmerVC: calculateVisualization");
 	AVAssetReader *reader = [AVAssetReader assetReaderWithAsset:soundFileAsset error:nil];
 	
-	NSDictionary *recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
-									[NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
-									[NSNumber numberWithInt:44100.0],AVSampleRateKey,
-									[NSNumber numberWithInt: 1],AVNumberOfChannelsKey,
-									//[NSNumber numberWithInt: AVAudioQualityMin],AVSampleRateConverterAudioQualityKey,
-									nil];
-	
-	AVAssetReaderAudioMixOutput *output = [AVAssetReaderAudioMixOutput assetReaderAudioMixOutputWithAudioTracks:soundFileAsset.tracks audioSettings:recordSettings];
+	AVAssetReaderAudioMixOutput *output = [AVAssetReaderAudioMixOutput assetReaderAudioMixOutputWithAudioTracks:soundFileAsset.tracks 
+																								  audioSettings:[AppModel sharedAppModel].recordSettings];
 	[reader addOutput:output];
 	[reader startReading];
 	
-	CMSampleBufferRef buffer = [output copyNextSampleBuffer];
+	int y = 0;
+	CMSampleBufferRef ref;
 
+	while (ref = [output copyNextSampleBuffer]) {
+		AudioBufferList audioBufferList;
+		CMBlockBufferRef blockBuffer;
+		CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer(ref, NULL, &audioBufferList, sizeof(audioBufferList), NULL, NULL, 0, &blockBuffer);
+		for( int y=0; y<audioBufferList.mNumberBuffers; y++ ){ //loop through the buffers that make up the sound
+			AudioBuffer audioBuffer = audioBufferList.mBuffers[y]; //get a copy to the audio buffer
+			int bitDepth = [[(NSDictionary*)([AppModel sharedAppModel].recordSettings) objectForKey: AVLinearPCMBitDepthKey] intValue];
+			UInt32 frameCount = audioBuffer.mDataByteSize / bitDepth;  
+			Float32 *frame = (Float32*)audioBuffer.mData;
+			for(UInt32 i=0; i<frameCount; i++ ) {
+				Float32 currentSample = frame[i];
+				[audioAsArray addObject:[NSNumber numberWithFloat:currentSample]];
+			}
+		}
+	}
+				 
+	NSLog(@"Adding Plot Now");
+
+	graph = [[CPXYGraph alloc] initWithFrame:spectrogramView.frame];
+	spectrogramView.hostedGraph = graph;
+	graph.paddingLeft = 0.0;
+	graph.paddingTop = 0.0;
+	graph.paddingRight = 0.0;
+	graph.paddingBottom = 0.0;
 	
+	/*
+	 CPXYAxisSet *axisSet = (CPXYAxisSet *)graph.axisSet;
+	 
+	 CPLineStyle *lineStyle = [CPLineStyle lineStyle];
+	 lineStyle.lineColor = [CPColor whiteColor];
+	 lineStyle.lineWidth = 1.0f;
+	 
+	 axisSet.xAxis.majorIntervalLength = CPDecimalFromString(@"1000");
+	 axisSet.xAxis.minorTicksPerInterval = 4;
+	 axisSet.xAxis.majorTickLineStyle = lineStyle;
+	 axisSet.xAxis.minorTickLineStyle = lineStyle;
+	 axisSet.xAxis.axisLineStyle = lineStyle;
+	 axisSet.xAxis.minorTickLength = 5.0f;
+	 axisSet.xAxis.majorTickLength = 7.0f;
+	 CPXYAxis* x = axisSet.xAxis;	
+	 x.labelRotation = M_PI/2.0;
+	 x.minorTicksPerInterval = 5;
+	 x.labelingPolicy = CPAxisLabelingPolicyAutomatic;
+	 x.preferredNumberOfMajorTicks = 8;
+	 NSNumberFormatter *xLabelFormatter = [[NSNumberFormatter alloc] init];
+	 [xLabelFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+	 [xLabelFormatter setPositiveFormat:@"0000"];
+	 x.labelFormatter = xLabelFormatter;
+	 
+	 axisSet.yAxis.majorIntervalLength = CPDecimalFromString(@"100");
+	 axisSet.yAxis.minorTicksPerInterval = 4;
+	 axisSet.yAxis.majorTickLineStyle = lineStyle;
+	 axisSet.yAxis.minorTickLineStyle = lineStyle;
+	 axisSet.yAxis.axisLineStyle = lineStyle;
+	 axisSet.yAxis.minorTickLength = 5.0f;
+	 axisSet.yAxis.majorTickLength = 7.0f;
+	 CPXYAxis* y = axisSet.yAxis;
+	 y.labelingPolicy = CPAxisLabelingPolicyAutomatic;
+	 y.preferredNumberOfMajorTicks = 4;	
+	 NSNumberFormatter *yLabelFormatter = [[NSNumberFormatter alloc] init];
+	 [yLabelFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+	 [yLabelFormatter setPositiveFormat:@"0000"];
+	 y.labelFormatter = yLabelFormatter;
+	 y.minorTicksPerInterval = 1;
+	 */
+	
+	CPScatterPlot *plot = [[[CPScatterPlot alloc] 
+									initWithFrame:spectrogramView.bounds] autorelease];
+	plot.identifier = @"plot";
+	plot.dataLineStyle.lineWidth = 1.0f;
+	plot.dataLineStyle.lineColor = [CPColor blueColor];
+	plot.dataSource = self;
+	[graph addPlot:plot];	
+	
+	
+	CPXYPlotSpace *plotSpace = (CPXYPlotSpace *)graph.defaultPlotSpace;
+	[plotSpace scaleToFitPlots:[[NSArray alloc] initWithObjects:plot,nil]];
+ 
+	/*
+	CPXYPlotSpace *plotSpace = (CPXYPlotSpace *)graph.defaultPlotSpace;
+	plotSpace.xRange = [CPPlotRange plotRangeWithLocation:CPDecimalFromFloat(0.00f)
+												   length:CPDecimalFromInt([audioAsArray count])];
+	plotSpace.yRange = [CPPlotRange plotRangeWithLocation:CPDecimalFromFloat(-1.00f) 
+												   length:CPDecimalFromFloat(2.00f)];
+
+	*/
 }
 
 - (void)calculateTrimmedAudio{

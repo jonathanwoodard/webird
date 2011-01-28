@@ -9,9 +9,12 @@
 #import "AppModel.h"
 #import "ASIFormDataRequest.h"
 #import "WeBIRDAppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @implementation AppModel
 @synthesize serverURL;
+@synthesize recordSettings;
 @synthesize currentUserLocation;
 
 
@@ -22,6 +25,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 -(id)init {
     if (self = [super init]) {
 		serverURL = @"http://ornithology.wisc.edu/webird";
+		recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
+										[NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
+										[NSNumber numberWithInt:44100.0],AVSampleRateKey,
+										[NSNumber numberWithInt: 1],AVNumberOfChannelsKey,
+										[NSNumber numberWithInt: 32], AVLinearPCMBitDepthKey,
+										[NSNumber numberWithBool: NO],AVLinearPCMIsBigEndianKey,
+										[NSNumber numberWithBool: YES],AVLinearPCMIsFloatKey,
+										nil];
+		
 	}
 	
     return self;
