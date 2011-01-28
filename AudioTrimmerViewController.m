@@ -156,21 +156,15 @@
 
 #pragma mark Core Plot Delegate
 -(NSUInteger)numberOfRecordsForPlot:(CPPlot *)plot{
-	NSLog(@"AudioTrimmerVC: There are %d records in audioAsArray",[audioAsArray count]);
-	return [audioAsArray count];
+	return spectrogramView.frame.size.width;
 }
 
 -(NSNumber *)numberForPlot:(CPPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
-	switch ( fieldEnum ) {
-		case CPScatterPlotFieldX:
-			return [NSNumber numberWithUnsignedInteger:index];
-			break;
-		case CPScatterPlotFieldY:
-			//NSLog(@"index = %d value = %@", index, [audioAsArray objectAtIndex:index]);
-			return [audioAsArray objectAtIndex:index];
-			break;
-    }
-
+	if (fieldEnum == CPScatterPlotFieldX ) return [NSNumber numberWithUnsignedInteger:index];
+	
+	Float32 samplesPerPixel = [audioAsArray count] / spectrogramView.frame.size.width;
+	NSUInteger scaledIndex = floor(samplesPerPixel * index);
+	return [audioAsArray objectAtIndex:scaledIndex];
 }
 
 #pragma mark Managing Touches
@@ -435,6 +429,7 @@
 	return CMTimeRangeMake(start, duration);
 	
 }
+
 
 -(Float64)secondsForXPosition: (CGFloat)xPos {
 	Float64 timePerPixel = CMTimeGetSeconds(soundFileDuration)/spectrogramView.frame.size.width;
