@@ -12,12 +12,14 @@
 
 @interface AppModel : NSObject {
 	NSString* serverURL;
+	NSDictionary* recordSettings;
 	CLLocation *currentUserLocation;
 
 }
 
 
-@property(assign,readonly) NSString* serverURL;
+@property (assign,readonly) NSString* serverURL;
+@property (assign,readonly) NSDictionary* recordSettings;
 @property (nonatomic, retain) CLLocation *currentUserLocation;
 
 

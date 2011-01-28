@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
+#import <CorePlot/CorePlot.h>
+
 
 typedef enum {
 	kAudioTrimmerIn,
@@ -21,13 +23,17 @@ typedef enum {
 	kAudioTrimmerModePlaying,
 } AudioTrimmerMode;
 
-@interface AudioTrimmerViewController : UIViewController <AVAudioPlayerDelegate> {
+@interface AudioTrimmerViewController : UIViewController <AVAudioPlayerDelegate, CPPlotDataSource> {
 	IBOutlet UIView*	trimInBar;
 	IBOutlet UIView*	trimOutBar;
 	IBOutlet UIButton*	deleteButton;
 	IBOutlet UIButton*	playButton;
 	IBOutlet UIButton*	analyzeButton;
-	IBOutlet UIView*	spectrogramView;
+	IBOutlet CPGraphHostingView*	spectrogramView;
+	
+	
+	CPXYGraph *graph;
+	NSMutableArray *audioAsArray;
 	
 	AudioTrimmerInOrOut selectedTrimmer;
 	AudioTrimmerMode mode;
