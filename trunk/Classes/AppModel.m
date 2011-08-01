@@ -10,7 +10,7 @@
 #import "ASIFormDataRequest.h"
 #import "WeBIRDAppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "SBJSON.h"
 
 @implementation AppModel
 @synthesize serverURL;
@@ -24,7 +24,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 
 -(id)init {
     if (self = [super init]) {
-		serverURL = @"http://ornithology.wisc.edu/webird";
+		//serverURL = @"http://ornithology.wisc.edu/webird";
+        serverURL = @"http://davembp.local";
 		recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
 										[NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
 										[NSNumber numberWithInt:44100.0],AVSampleRateKey,
@@ -55,7 +56,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 	[request setDidFailSelector:@selector(uploadItemRequestFailed:)];
 	[request setDelegate:self];
 	
-	NSLog(@"Model: Uploading File. fileName:%@", fileName);
+	NSLog(@"Model: Uploading %@ to %@", fileName, urlString);
 	
 	WeBIRDAppDelegate* appDelegate = (WeBIRDAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[appDelegate showWaitingIndicator:@"Uploading" displayProgressBar:YES];
@@ -72,8 +73,24 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 	
 	NSLog(@"Model: Upload Media Request Finished. Response: %@", response);
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Response from Server" 
-													message: response 
+    
+    //Parse It
+	SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *resultDictionary = [parser objectWithString:response]; 
+    
+    
+    int birdId;
+    NSString *birdIDString = [resultDictionary objectForKey:@"birdId"];
+    if ((NSNull *)birdIDString != [NSNull null]) birdId = [birdIDString intValue];
+    
+    float reliability;
+    NSString *reliabilityString = [resultDictionary objectForKey:@"reliability"];
+    if ((NSNull *)birdIDString != [NSNull null]) reliability = [reliabilityString intValue];
+
+    //Load the image and Name if we have it
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Response from Server" 
+													message: [NSString stringWithFormat:@"Id = %d \n R = %f", birdId, reliability]
 												   delegate: self 
 										  cancelButtonTitle: @"Ok" 
 										  otherButtonTitles: nil];
