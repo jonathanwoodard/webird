@@ -10,7 +10,7 @@
 #import <CoreMedia/CoreMedia.h>
 
 #import "AudioRecorderViewController.h"
-#import "AppModel.h";
+#import "AppModel.h"
 #import "AudioTrimmerViewController.h"
 
 
@@ -25,7 +25,7 @@
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		self.title = @"Recorder";	
     }
     return self;
