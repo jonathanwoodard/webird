@@ -11,9 +11,10 @@
 #import <CoreLocation/CLLocationManagerDelegate.h>
 #import "WaitingIndicatorViewController.h"
 
-@interface WeBIRDAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, CLLocationManagerDelegate > {
+@interface WeBIRDAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, CLLocationManagerDelegate> {
     UIWindow *window;
     UITabBarController *tabBarController;
+    UINavigationController *navController;
 	CLLocationManager *locationManager;
 	WaitingIndicatorViewController *waitingIndicator;
 
@@ -21,6 +22,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+@property (nonatomic, retain) UINavigationController *navController;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, retain) WaitingIndicatorViewController *waitingIndicator;
 

@@ -25,7 +25,7 @@
 
 
 + (AppModel *)sharedAppModel;
-- (void)uploadFile:(NSData *)fileData;
+- (void)identifyBirdFromAudio:(NSData *)fileData;
 
 
 

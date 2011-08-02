@@ -15,6 +15,7 @@
 
 @synthesize window;
 @synthesize tabBarController;
+@synthesize navController;
 @synthesize locationManager;
 @synthesize waitingIndicator;
 
@@ -38,9 +39,8 @@
 	NSLog(@"WeBIRDAppDelegate: Configure UI");
     //[window addSubview:tabBarController.view];
 	AudioRecorderViewController *audioRecorderVC = [[AudioRecorderViewController alloc] initWithNibName:@"AudioRecorderViewController" bundle:nil];
-	UINavigationController *audioRecorderNav = [[UINavigationController alloc] initWithRootViewController:audioRecorderVC];
-	[window addSubview:audioRecorderNav.view];
-	
+	self.navController = [[UINavigationController alloc]initWithRootViewController:audioRecorderVC];
+	[window addSubview:self.navController.view];
 	
     [window makeKeyAndVisible];
 
