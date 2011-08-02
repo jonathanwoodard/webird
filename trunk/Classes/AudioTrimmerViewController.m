@@ -140,7 +140,7 @@
 - (IBAction) analyzeButtonAction: (id) sender{
 	NSData *audioData = [NSData dataWithContentsOfURL:trimmedSoundFileURL];
 	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];	
-	[[AppModel sharedAppModel] uploadFile:audioData];
+	[[AppModel sharedAppModel] identifyBirdFromAudio:audioData];
 }	
 
 - (IBAction) deleteButtonAction: (id) sender{

@@ -11,6 +11,10 @@
 #import "WeBIRDAppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
 #import "SBJSON.h"
+#import "WeBIRDAppDelegate.h"
+#import "Bird.h"
+#import "BirdImageViewController.h"
+
 
 @implementation AppModel
 @synthesize serverURL;
@@ -24,8 +28,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 
 -(id)init {
     if (self = [super init]) {
-		//serverURL = @"http://ornithology.wisc.edu/webird";
-        serverURL = @"http://davembp.local";
+		serverURL = @"http://ornithology.wisc.edu/webird";
+        //serverURL = @"http://davembp.local";
 		recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
 										[NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
 										[NSNumber numberWithInt:44100.0],AVSampleRateKey,
@@ -41,7 +45,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
 }
 
 
-- (void)uploadFile:(NSData *)fileData{
+- (void)identifyBirdFromAudio:(NSData *)fileData{
 	NSString *fileName = @"audio.m4a";
 	
 	
@@ -85,17 +89,66 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppModel);
     
     float reliability;
     NSString *reliabilityString = [resultDictionary objectForKey:@"reliability"];
-    if ((NSNull *)birdIDString != [NSNull null]) reliability = [reliabilityString intValue];
+    if ((NSNull *)reliabilityString != [NSNull null]) reliability = [reliabilityString intValue];
 
+    
+    
     //Load the image and Name if we have it
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Response from Server" 
-													message: [NSString stringWithFormat:@"Id = %d \n R = %f", birdId, reliability]
-												   delegate: self 
-										  cancelButtonTitle: @"Ok" 
-										  otherButtonTitles: nil];
-	[alert show];
-	[alert release];	
+    Bird *b = [[Bird alloc]init];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Bird Not In Database" 
+                                                    message: [NSString stringWithFormat:@"Result from server: \nId = %d \n R = %f", birdId, reliability]
+                                                   delegate: self 
+                                          cancelButtonTitle: @"Ok" 
+                                          otherButtonTitles: nil];
+    switch (birdId) {
+        case 1652:
+            b.commonName = @"Cerulean Warbler";
+            break;
+        case 1530:
+            b.commonName = @"Wood Thrush";
+            break;
+        case 1307:
+            b.commonName = @"Warbling Vireo";
+            break;
+        case 1399:
+            b.commonName = @"Tufted Titmouse";
+            break;
+        case 1439:
+            b.commonName = @"House Wren";
+            break;
+        case 1811:
+            b.commonName = @"Eastern Towhee";
+            break;
+        case 1669:
+            b.commonName = @"Common Yellowthroat";
+            break;
+        case 1833:
+            b.commonName = @"Chipping Sparrow";
+            break;
+        case 1340:
+            b.commonName = @"Blue Jay";
+            break;
+        case 1390:
+            b.commonName = @"Black-capped Chickadee";
+            break;
+        default:
+            [alert show];
+            [alert release];
+            return;
+            break;
+    }
+    
+    b.uid = [NSNumber numberWithInt: birdId];
+    b.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",b.uid]];
+
+    
+    BirdImageViewController *bivc = [[BirdImageViewController alloc]initWithBird:b];
+    [b release];
+    
+    [appDelegate.navController pushViewController:bivc animated:YES];
+    [bivc release];
+    
 		
 }
 
