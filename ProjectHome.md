@@ -1,0 +1,1 @@
+WeBIRD is a project for citizen scientists to take bird sightings using the microphone of their iPhone.
